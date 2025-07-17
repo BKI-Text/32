@@ -1,0 +1,94 @@
+{
+  "app_name": "Beverly Knits AI Supply Chain Planner",
+  "version": "1.0.0",
+  "environment": "development",
+  "debug": true,
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "beverly_knits",
+    "username": "postgres",
+    "password": "",
+    "pool_size": 5,
+    "max_overflow": 10
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file_path": null,
+    "max_bytes": 10485760,
+    "backup_count": 5
+  },
+  "planning": {
+    "source_weights": {
+      "sales_order": 1.0,
+      "prod_plan": 0.9,
+      "projection": 0.7,
+      "sales_history": 0.8
+    },
+    "safety_stock_percentage": 0.15,
+    "planning_horizon_days": 90,
+    "forecast_lookback_days": 30,
+    "cost_weight": 0.6,
+    "reliability_weight": 0.4,
+    "max_suppliers_per_material": 3,
+    "enable_eoq_optimization": true,
+    "enable_multi_supplier": true,
+    "enable_risk_assessment": true,
+    "default_ordering_cost": 100.0,
+    "default_holding_cost_rate": 0.25,
+    "risk_thresholds": {
+      "high": 0.7,
+      "medium": 0.85,
+      "low": 1.0
+    }
+  },
+  "data_integration": {
+    "live_data_path": "data/live/",
+    "input_data_path": "data/input/",
+    "output_data_path": "data/output/",
+    "processed_data_path": "data/processed/",
+    "backup_data_path": "data/backup/",
+    "auto_fix_negative_inventory": true,
+    "auto_fix_bom_percentages": true,
+    "auto_clean_cost_data": true,
+    "auto_remove_invalid_suppliers": true,
+    "validation_rules": {
+      "min_reliability_score": 0.0,
+      "max_reliability_score": 1.0,
+      "min_cost_per_unit": 0.01,
+      "max_lead_time_days": 365,
+      "required_bom_sum_tolerance": 0.01
+    }
+  },
+  "streamlit": {
+    "port": 8501,
+    "host": "localhost",
+    "title": "Beverly Knits AI Supply Chain Planner",
+    "page_icon": "🧶",
+    "layout": "wide",
+    "theme": {
+      "primary_color": "#2E86AB",
+      "background_color": "#FFFFFF",
+      "secondary_background_color": "#F0F2F6",
+      "text_color": "#262730"
+    }
+  },
+  "ai": {
+    "enable_ai_integration": true,
+    "zen_mcp_server_config": "config/zen_ml_config.json",
+    "model_cache_path": "models/cache/",
+    "forecasting_models": {
+      "arima": true,
+      "prophet": true,
+      "xgboost": true,
+      "lstm": true
+    },
+    "ml_features": {
+      "demand_forecasting": true,
+      "supplier_risk_scoring": true,
+      "price_prediction": true,
+      "quality_prediction": true
+    }
+  }
+}

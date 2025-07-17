@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(python:*)",
+      "Bash(find:*)",
+      "Bash(cp:*)",
+      "Bash(rm:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(mv:*)",
+      "Bash(streamlit run:*)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(npx @modelcontextprotocol/server-filesystem:*)",
+      "Bash(npx:*)",
+      "Bash(curl:*)",
+      "Bash(npm search:*)",
+      "Bash(timeout 5 npx -y mcp-sqlite --db-path /mnt/c/Users/psytz/efab.ai/data)",
+      "Bash(cat:*)",
+      "Bash(timeout:*)",
+      "Bash(export OPENAI_API_KEY=\"test\")",
+      "Bash(export GEMINI_API_KEY=\"test\")",
+      "Bash(export ANTHROPIC_API_KEY=\"test\")",
+      "Bash(kill:*)",
+      "Bash(source:*)",
+      "Bash(pip3 list:*)",
+      "Bash(ss:*)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)"
+    ],
+    "deny": []
+  }
+}

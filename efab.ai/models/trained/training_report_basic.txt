@@ -1,0 +1,26 @@
+Beverly Knits Basic ML Training Report
+==================================================
+
+Training completed: 2025-07-14 00:30:00
+Using available dependencies: sklearn, pandas, numpy
+
+TRAINED MODELS:
+--------------------
+Demand Forecasting: success
+  Algorithm: Random Forest
+  MAPE: 94.44%
+  MAE: 2675.03
+  RMSE: 3078.36
+  Features: 11
+
+Price Prediction: success
+  Algorithm: Linear Regression
+  MAPE: 18.75%
+  MAE: 1.26
+  RMSE: 1.62
+
+Anomaly Detection: success
+  Algorithm: Isolation Forest
+  Samples: 248
+  Anomalies: 25 (10.1%)
+

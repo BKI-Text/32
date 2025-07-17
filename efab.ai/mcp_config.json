@@ -1,0 +1,68 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/mnt/c/Users/psytz/efab.ai"
+      ]
+    },
+    "sqlite": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-sqlite",
+        "--db-path",
+        "/mnt/c/Users/psytz/efab.ai/data"
+      ]
+    },
+    "context7-docs": {
+      "command": "C:\\WINDOWS\\System32\\cmd.exe",
+      "args": [
+        "/C",
+        "npx",
+        "--yes",
+        "mcp-remote",
+        "https://gitmcp.io/upstash/context7"
+      ]
+    },
+    "Netlify": {
+      "command": "npx -y @netlify/mcp",
+      "env": {}
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "zen": {
+      "command": "/mnt/c/Users/psytz/zen-mcp-server/.zen_venv/Scripts/python.exe",
+      "args": [
+        "/mnt/c/Users/psytz/zen-mcp-server/server.py"
+      ],
+      "cwd": "/mnt/c/Users/psytz/zen-mcp-server",
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
+      }
+    },
+    "Playwright": {
+      "command": "npx @playwright/mcp@latest",
+      "env": {}
+    },
+    "Context7": {
+      "url": "https://mcp.context7.com/mcp"
+    }
+  }
+}

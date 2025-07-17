@@ -1,0 +1,2488 @@
+{
+  "timestamp": "2025-07-13T16:49:45.218049",
+  "total_materials": 248,
+  "materials_assigned_costs": 248,
+  "supplier_mappings_created": 248,
+  "assignments": [
+    {
+      "material_id": 19020.0,
+      "description": "30/1 55/45 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 13.46,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.398206"
+    },
+    {
+      "material_id": 18868.0,
+      "description": "30/1 60/40 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.33,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.398579"
+    },
+    {
+      "material_id": 18517.0,
+      "description": "1/100/96 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.5,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.398862"
+    },
+    {
+      "material_id": 18847.0,
+      "description": "1/300/144 100% Polypropylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.02,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.399136"
+    },
+    {
+      "material_id": 18343.0,
+      "description": "3/300/72 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.86,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.399437"
+    },
+    {
+      "material_id": 19046.0,
+      "description": "24/1 95/5 Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.55,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.399685"
+    },
+    {
+      "material_id": 19009.0,
+      "description": "1/300/120 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 14.57,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.399910"
+    },
+    {
+      "material_id": 19025.0,
+      "description": "6/1 55/45 Tencel/Zoltek",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.09,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.400127"
+    },
+    {
+      "material_id": 19033.0,
+      "description": "20/1 60/40 Combed Cotton/Poly",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.35,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.400355"
+    },
+    {
+      "material_id": 18655.0,
+      "description": "12/1 100% Rayon",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.7,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.400645"
+    },
+    {
+      "material_id": 18789.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.22,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.400884"
+    },
+    {
+      "material_id": 18843.0,
+      "description": "1/150/50 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.94,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.401112"
+    },
+    {
+      "material_id": 18514.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.24,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.401374"
+    },
+    {
+      "material_id": 18563.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.11,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.401769"
+    },
+    {
+      "material_id": 18886.0,
+      "description": "30/1 50/50 Polyester/Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 13.51,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.402057"
+    },
+    {
+      "material_id": 18632.0,
+      "description": "30/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.88,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.402568"
+    },
+    {
+      "material_id": 18633.0,
+      "description": "30/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.22,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.403067"
+    },
+    {
+      "material_id": 18439.0,
+      "description": "30/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.11,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.403528"
+    },
+    {
+      "material_id": 18188.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.23,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.403928"
+    },
+    {
+      "material_id": 18761.0,
+      "description": "1/150/50 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.54,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.404229"
+    },
+    {
+      "material_id": 11798.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.21,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.404551"
+    },
+    {
+      "material_id": 18507.0,
+      "description": "1/200/192 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.66,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.404843"
+    },
+    {
+      "material_id": 18467.0,
+      "description": "1/165/36 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.84,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.405136"
+    },
+    {
+      "material_id": 18321.0,
+      "description": "1/300/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.89,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.405410"
+    },
+    {
+      "material_id": 18391.0,
+      "description": "2/300/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.98,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.405649"
+    },
+    {
+      "material_id": 12445.0,
+      "description": "24/1 100% Karded Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.92,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.405869"
+    },
+    {
+      "material_id": 18232.0,
+      "description": "4/330/72 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.57,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.406093"
+    },
+    {
+      "material_id": 11104.0,
+      "description": "1/75/72 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.59,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.406499"
+    },
+    {
+      "material_id": 18101.0,
+      "description": "1/167/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.42,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.406774"
+    },
+    {
+      "material_id": 18658.0,
+      "description": "12/1 60/40 Karded Cotton/Poly",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 13.28,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.406999"
+    },
+    {
+      "material_id": 18867.0,
+      "description": "30/1 50/50 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 14.32,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.407433"
+    },
+    {
+      "material_id": 18566.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.82,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.407784"
+    },
+    {
+      "material_id": 18360.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.83,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.408056"
+    },
+    {
+      "material_id": 18097.0,
+      "description": "30/1 100% Rayon",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 15.12,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.408284"
+    },
+    {
+      "material_id": 18297.0,
+      "description": "30/1 70/20/10 Polyester/Cotton/Rayon",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.13,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.408561"
+    },
+    {
+      "material_id": 12205.0,
+      "description": "20/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.92,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.408804"
+    },
+    {
+      "material_id": 18413.0,
+      "description": "1/300/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.33,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.409142"
+    },
+    {
+      "material_id": 18039.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.25,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.409448"
+    },
+    {
+      "material_id": 18110.0,
+      "description": "30/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 14.59,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.409676"
+    },
+    {
+      "material_id": 18765.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.04,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.409901"
+    },
+    {
+      "material_id": 18077.0,
+      "description": "20/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.69,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.410123"
+    },
+    {
+      "material_id": 18755.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.33,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.410335"
+    },
+    {
+      "material_id": 18315.0,
+      "description": "1/160/36 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.26,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.410540"
+    },
+    {
+      "material_id": 12134.0,
+      "description": "1/145/34 Polyester Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.58,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.410740"
+    },
+    {
+      "material_id": 18604.0,
+      "description": "30/1 50/50 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.61,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.410965"
+    },
+    {
+      "material_id": 19004.0,
+      "description": "24/1 96/4 Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.29,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.411198"
+    },
+    {
+      "material_id": 18332.0,
+      "description": "30/1 80/12/8 Polyester/Rayon/Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.72,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.411396"
+    },
+    {
+      "material_id": 18465.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.52,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.411606"
+    },
+    {
+      "material_id": 18109.0,
+      "description": "20/1 100% Karded Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 13.44,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.411824"
+    },
+    {
+      "material_id": 18866.0,
+      "description": "1/150/96 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.96,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.412035"
+    },
+    {
+      "material_id": 18660.0,
+      "description": "4/300/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.99,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.412239"
+    },
+    {
+      "material_id": 18423.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.17,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.412456"
+    },
+    {
+      "material_id": 18314.0,
+      "description": "1/160/36 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.46,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.412706"
+    },
+    {
+      "material_id": 12116.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.88,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.412969"
+    },
+    {
+      "material_id": 18713.0,
+      "description": "1/150/50 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.91,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.413205"
+    },
+    {
+      "material_id": 18782.0,
+      "description": "30/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 13.31,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.413417"
+    },
+    {
+      "material_id": 18609.0,
+      "description": "2/150/50 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.97,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.413711"
+    },
+    {
+      "material_id": 11536.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.82,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.413939"
+    },
+    {
+      "material_id": 18318.0,
+      "description": "30/1 70/10/20 Polyester/Cotton/Rayon",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.03,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.414166"
+    },
+    {
+      "material_id": 18784.0,
+      "description": "30/1 50/50 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.14,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.414388"
+    },
+    {
+      "material_id": 18644.0,
+      "description": "2/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.15,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.414598"
+    },
+    {
+      "material_id": 18475.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.36,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.414799"
+    },
+    {
+      "material_id": 18830.0,
+      "description": "1/1 100% Lurex",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.29,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.415158"
+    },
+    {
+      "material_id": 6938.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.59,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.415377"
+    },
+    {
+      "material_id": 18852.0,
+      "description": "20/1 60/40 Celliant/Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.4,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.415578"
+    },
+    {
+      "material_id": 18233.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.06,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.415887"
+    },
+    {
+      "material_id": 18153.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.27,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.416187"
+    },
+    {
+      "material_id": 18319.0,
+      "description": "24/1 100% Bamboo",
+      "base_material": "BAMBOO",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.66,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.416421"
+    },
+    {
+      "material_id": 18856.0,
+      "description": "1/300/100 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.65,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.416660"
+    },
+    {
+      "material_id": 18453.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.47,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.416911"
+    },
+    {
+      "material_id": 18629.0,
+      "description": "30/1 50/50 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.28,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.417150"
+    },
+    {
+      "material_id": 18618.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.91,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.417446"
+    },
+    {
+      "material_id": 18853.0,
+      "description": "18/1 98/2 Karded Cotton/Poly",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 14.67,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.417661"
+    },
+    {
+      "material_id": 18639.0,
+      "description": "2/225/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.7,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.417867"
+    },
+    {
+      "material_id": 18145.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.44,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.418070"
+    },
+    {
+      "material_id": 18357.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.12,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.418267"
+    },
+    {
+      "material_id": 18457.0,
+      "description": "1/75/72 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.76,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.418495"
+    },
+    {
+      "material_id": 18358.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.44,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.418872"
+    },
+    {
+      "material_id": 18725.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.45,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.419249"
+    },
+    {
+      "material_id": 19006.0,
+      "description": "24/1 50/40/10 Karded Cotton/Poly",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.46,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.419546"
+    },
+    {
+      "material_id": 18142.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.96,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.419866"
+    },
+    {
+      "material_id": 18630.0,
+      "description": "30/1 50/50 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.54,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.420141"
+    },
+    {
+      "material_id": 18356.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.08,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.420385"
+    },
+    {
+      "material_id": 11937.0,
+      "description": "1/145/34 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.68,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.420747"
+    },
+    {
+      "material_id": 18616.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.14,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.421065"
+    },
+    {
+      "material_id": 18966.0,
+      "description": "1/1 100% Lurex",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.99,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.421343"
+    },
+    {
+      "material_id": 18373.0,
+      "description": "2/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.19,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.421635"
+    },
+    {
+      "material_id": 12306.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.7,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.422038"
+    },
+    {
+      "material_id": 18849.0,
+      "description": "1/150/50 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.12,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.422375"
+    },
+    {
+      "material_id": 12308.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.34,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.422704"
+    },
+    {
+      "material_id": 18466.0,
+      "description": "30/1 100% Tencel",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.25,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.423011"
+    },
+    {
+      "material_id": 18442.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.3,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.423267"
+    },
+    {
+      "material_id": 18728.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.14,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.423516"
+    },
+    {
+      "material_id": 18164.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.25,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.423759"
+    },
+    {
+      "material_id": 18819.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.42,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.424253"
+    },
+    {
+      "material_id": 18229.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.05,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.424561"
+    },
+    {
+      "material_id": 18987.0,
+      "description": "4/300/72 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.18,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.424843"
+    },
+    {
+      "material_id": 18047.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.8,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.425175"
+    },
+    {
+      "material_id": 18937.0,
+      "description": "1/300/68 100% Polypropylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 15.1,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.425414"
+    },
+    {
+      "material_id": 18753.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.49,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.425728"
+    },
+    {
+      "material_id": 18649.0,
+      "description": "30/1 50/50 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.26,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.426028"
+    },
+    {
+      "material_id": 11461.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.78,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.426247"
+    },
+    {
+      "material_id": 18653.0,
+      "description": "1/180/204 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.58,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.426464"
+    },
+    {
+      "material_id": 18139.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.84,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.426715"
+    },
+    {
+      "material_id": 18622.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.46,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.426925"
+    },
+    {
+      "material_id": 18960.0,
+      "description": "20/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.37,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.427138"
+    },
+    {
+      "material_id": 11942.0,
+      "description": "1/167/46 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.67,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.427352"
+    },
+    {
+      "material_id": 18748.0,
+      "description": "20/1 90/10 Karded Cotton/Poly",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.42,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.427558"
+    },
+    {
+      "material_id": 18143.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.41,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.427756"
+    },
+    {
+      "material_id": 18726.0,
+      "description": "8/1 100% Karded Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 15.06,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.427954"
+    },
+    {
+      "material_id": 18836.0,
+      "description": "20/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 14.67,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.428150"
+    },
+    {
+      "material_id": 18293.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.44,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.428352"
+    },
+    {
+      "material_id": 18361.0,
+      "description": "20/1 100% Tencel",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.9,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.428662"
+    },
+    {
+      "material_id": 18559.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.01,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.428933"
+    },
+    {
+      "material_id": 18724.0,
+      "description": "1/150/68 100% Nylon",
+      "base_material": "NYLON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.45,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.429165"
+    },
+    {
+      "material_id": 12047.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.54,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.429377"
+    },
+    {
+      "material_id": 18328.0,
+      "description": "30/1 80/12/8 Polyester/Rayon/Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.72,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.429579"
+    },
+    {
+      "material_id": 18734.0,
+      "description": "1/200 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.84,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.429808"
+    },
+    {
+      "material_id": 11570.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.21,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.430024"
+    },
+    {
+      "material_id": 18086.0,
+      "description": "30/1 100% Rayon",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.54,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.430230"
+    },
+    {
+      "material_id": 18430.0,
+      "description": "30/1 100% Celliant",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 13.69,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.430473"
+    },
+    {
+      "material_id": 18876.0,
+      "description": "20/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.95,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.430714"
+    },
+    {
+      "material_id": 18835.0,
+      "description": "20/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 14.17,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.430934"
+    },
+    {
+      "material_id": 18939.0,
+      "description": "1/300/68 100% Polypropylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.11,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.431143"
+    },
+    {
+      "material_id": 18307.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.1,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.431343"
+    },
+    {
+      "material_id": 18610.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.75,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.431558"
+    },
+    {
+      "material_id": 18794.0,
+      "description": "2/300/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.2,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.431937"
+    },
+    {
+      "material_id": 12329.0,
+      "description": "30/1 90/10 Tencel/Silk",
+      "base_material": "SILK",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 49.49,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.432293"
+    },
+    {
+      "material_id": 18396.0,
+      "description": "1/70/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.58,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.432829"
+    },
+    {
+      "material_id": 18613.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.34,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.433289"
+    },
+    {
+      "material_id": 18556.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.67,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.433590"
+    },
+    {
+      "material_id": 18150.0,
+      "description": "30/1 100% Bamboo",
+      "base_material": "BAMBOO",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.8,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.433906"
+    },
+    {
+      "material_id": 18513.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.58,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.434202"
+    },
+    {
+      "material_id": 18327.0,
+      "description": "30/1 80/12/8 Polyester/Rayon/Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 15.03,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.434478"
+    },
+    {
+      "material_id": 18570.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.54,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.434711"
+    },
+    {
+      "material_id": 18383.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.58,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.434927"
+    },
+    {
+      "material_id": 18888.0,
+      "description": "30/1 50/50 Polyester/Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.55,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.435147"
+    },
+    {
+      "material_id": 19000.0,
+      "description": "30/1 90/10 Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.98,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.435374"
+    },
+    {
+      "material_id": 18372.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.01,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.435734"
+    },
+    {
+      "material_id": 18444.0,
+      "description": "2/150/36 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.75,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.435962"
+    },
+    {
+      "material_id": 18312.0,
+      "description": "30/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.52,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.436212"
+    },
+    {
+      "material_id": 18930.0,
+      "description": "30/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 13.0,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.436470"
+    },
+    {
+      "material_id": 18710.0,
+      "description": "18/1 90/10 Karded Cotton/Poly",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.55,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.436784"
+    },
+    {
+      "material_id": 18593.0,
+      "description": "1/150/136 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.55,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.437008"
+    },
+    {
+      "material_id": 18766.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.26,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.437214"
+    },
+    {
+      "material_id": 11429.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.18,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.437415"
+    },
+    {
+      "material_id": 18605.0,
+      "description": "30/1 50/50 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.95,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.437619"
+    },
+    {
+      "material_id": 18555.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.82,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.437823"
+    },
+    {
+      "material_id": 18878.0,
+      "description": "18/1 65/35 Polyester/Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.23,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.438056"
+    },
+    {
+      "material_id": 18476.0,
+      "description": "1/200/100 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.62,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.438427"
+    },
+    {
+      "material_id": 18923.0,
+      "description": "1/300/68 100% Polypropylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 15.27,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.438712"
+    },
+    {
+      "material_id": 18625.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.41,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.438969"
+    },
+    {
+      "material_id": 18477.0,
+      "description": "1/210/144 40/60 Polyethylene/Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.33,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.439538"
+    },
+    {
+      "material_id": 11344.0,
+      "description": "2/70/68 100% Nylon",
+      "base_material": "NYLON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.44,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.439831"
+    },
+    {
+      "material_id": 18893.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.72,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.440099"
+    },
+    {
+      "material_id": 18547.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.25,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.440335"
+    },
+    {
+      "material_id": 18854.0,
+      "description": "30/1 98/2 Karded Cotton/Poly",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.92,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.440693"
+    },
+    {
+      "material_id": 19030.0,
+      "description": "30/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.1,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.440953"
+    },
+    {
+      "material_id": 7716.0,
+      "description": "24/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.37,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.441343"
+    },
+    {
+      "material_id": 18628.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.22,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.441651"
+    },
+    {
+      "material_id": 18679.0,
+      "description": "1/70/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.46,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.441872"
+    },
+    {
+      "material_id": 18993.0,
+      "description": "1/75/36 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.32,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.442177"
+    },
+    {
+      "material_id": 18895.0,
+      "description": "28/1 67/33 Polyester/Viscose",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.27,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.442406"
+    },
+    {
+      "material_id": 18208.0,
+      "description": "2/70/130 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.72,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.442626"
+    },
+    {
+      "material_id": 18228.0,
+      "description": "1/75/36 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.48,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.442830"
+    },
+    {
+      "material_id": 18931.0,
+      "description": "30/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.56,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.443040"
+    },
+    {
+      "material_id": 18363.0,
+      "description": "1/75/36 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.31,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.443246"
+    },
+    {
+      "material_id": 18469.0,
+      "description": "1/50/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.51,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.443445"
+    },
+    {
+      "material_id": 18891.0,
+      "description": "30/1 50/50 Polyester/Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.29,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:44.443645"
+    },
+    {
+      "material_id": 18133.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.77,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.121038"
+    },
+    {
+      "material_id": 18623.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.87,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.121709"
+    },
+    {
+      "material_id": 18598.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.01,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.122156"
+    },
+    {
+      "material_id": 11967.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.51,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.122694"
+    },
+    {
+      "material_id": 18935.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.1,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.123047"
+    },
+    {
+      "material_id": 18845.0,
+      "description": "1/75/72 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.22,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.123561"
+    },
+    {
+      "material_id": 18821.0,
+      "description": "24/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.17,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.124046"
+    },
+    {
+      "material_id": 18887.0,
+      "description": "24/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.59,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.124472"
+    },
+    {
+      "material_id": 18452.0,
+      "description": "1/150/72 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.3,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.124977"
+    },
+    {
+      "material_id": 18184.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.26,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.125387"
+    },
+    {
+      "material_id": 18317.0,
+      "description": "1/200/192 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.48,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.125787"
+    },
+    {
+      "material_id": 18359.0,
+      "description": "20/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.82,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.126146"
+    },
+    {
+      "material_id": 18865.0,
+      "description": "1/70/34 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.53,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.126505"
+    },
+    {
+      "material_id": 18990.0,
+      "description": "30/1 90/10 Combed Cotton/Poly",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 15.22,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.126880"
+    },
+    {
+      "material_id": 10742.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.6,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.127235"
+    },
+    {
+      "material_id": 18961.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.15,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.127607"
+    },
+    {
+      "material_id": 18285.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.83,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.127957"
+    },
+    {
+      "material_id": 19021.0,
+      "description": "28/1 90/10 Combed Cotton/Poly",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 14.59,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.128622"
+    },
+    {
+      "material_id": 18776.0,
+      "description": "1/300/120 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.19,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.129394"
+    },
+    {
+      "material_id": 18826.0,
+      "description": "20/2 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.17,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.130056"
+    },
+    {
+      "material_id": 18414.0,
+      "description": "3/300/72 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.39,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.130695"
+    },
+    {
+      "material_id": 18651.0,
+      "description": "1/300/120 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.37,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.131176"
+    },
+    {
+      "material_id": 18998.0,
+      "description": "24/1 95/5 Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.52,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.131769"
+    },
+    {
+      "material_id": 18800.0,
+      "description": "24/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.47,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.132592"
+    },
+    {
+      "material_id": 12526.0,
+      "description": "1/300/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.81,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.133178"
+    },
+    {
+      "material_id": 18973.0,
+      "description": "1/300/120 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.51,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.133833"
+    },
+    {
+      "material_id": 18617.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.49,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.134336"
+    },
+    {
+      "material_id": 18927.0,
+      "description": "2/300/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.91,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.134931"
+    },
+    {
+      "material_id": 18719.0,
+      "description": "1/300/68 100% Nylon",
+      "base_material": "NYLON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.06,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.135750"
+    },
+    {
+      "material_id": 18899.0,
+      "description": "30/1 98/2 Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.2,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.136457"
+    },
+    {
+      "material_id": 18894.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.36,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.137267"
+    },
+    {
+      "material_id": 18733.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.04,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.138083"
+    },
+    {
+      "material_id": 18287.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.82,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.138917"
+    },
+    {
+      "material_id": 18892.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.43,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.139597"
+    },
+    {
+      "material_id": 19034.0,
+      "description": "30/1 90/10 Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.95,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.140103"
+    },
+    {
+      "material_id": 11927.0,
+      "description": "2/300/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.58,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.140669"
+    },
+    {
+      "material_id": 18454.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.19,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.141145"
+    },
+    {
+      "material_id": 18376.0,
+      "description": "30/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.15,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.141529"
+    },
+    {
+      "material_id": 18832.0,
+      "description": "30/1 60/40 Polyester/Recycled Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.5,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.141918"
+    },
+    {
+      "material_id": 18615.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.03,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.142354"
+    },
+    {
+      "material_id": 18756.0,
+      "description": "1/300/120 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 15.2,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.142745"
+    },
+    {
+      "material_id": 18910.0,
+      "description": "30/1 99/1 Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.45,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.143130"
+    },
+    {
+      "material_id": 19040.0,
+      "description": "24/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 14.2,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.143531"
+    },
+    {
+      "material_id": 18912.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.42,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.144024"
+    },
+    {
+      "material_id": 18954.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.26,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.144472"
+    },
+    {
+      "material_id": 18306.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.98,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.144910"
+    },
+    {
+      "material_id": 18712.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.18,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.145275"
+    },
+    {
+      "material_id": 18787.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.93,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.145651"
+    },
+    {
+      "material_id": 18988.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.76,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.146027"
+    },
+    {
+      "material_id": 18890.0,
+      "description": "30/1 50/50 Polyester/Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.99,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.146393"
+    },
+    {
+      "material_id": 18614.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.61,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.146742"
+    },
+    {
+      "material_id": 18763.0,
+      "description": "2/300/68 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.04,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.147087"
+    },
+    {
+      "material_id": 18785.0,
+      "description": "1/300/120 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.44,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.147451"
+    },
+    {
+      "material_id": 18594.0,
+      "description": "1/300/120 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.19,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.147866"
+    },
+    {
+      "material_id": 18290.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.91,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.148431"
+    },
+    {
+      "material_id": 18706.0,
+      "description": "11/1 59/41 Modacrylic/Fiberglass",
+      "base_material": "ACRYLIC",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 3.59,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.148994"
+    },
+    {
+      "material_id": 18913.0,
+      "description": "1/300/120 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 12.47,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.149602"
+    },
+    {
+      "material_id": 18667.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.66,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.150209"
+    },
+    {
+      "material_id": 18673.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.45,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.150734"
+    },
+    {
+      "material_id": 18674.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.9,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.151281"
+    },
+    {
+      "material_id": 18690.0,
+      "description": "1/300/68 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 15.03,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.151773"
+    },
+    {
+      "material_id": 18900.0,
+      "description": "30/1 96/4 Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.51,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.152312"
+    },
+    {
+      "material_id": 18737.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 6.05,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.152867"
+    },
+    {
+      "material_id": 18261.0,
+      "description": "30/1 70/20/10 Polyester/Cotton/Rayon",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 13.23,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.153474"
+    },
+    {
+      "material_id": 18620.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.54,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.154154"
+    },
+    {
+      "material_id": 18773.0,
+      "description": "1/300/120 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.1,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.154745"
+    },
+    {
+      "material_id": 18553.0,
+      "description": "28/1 80/20 Celliant/Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 5.71,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.155344"
+    },
+    {
+      "material_id": 18872.0,
+      "description": "30/1 98/2 Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.64,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.155861"
+    },
+    {
+      "material_id": 18489.0,
+      "description": "1/180/48 100% Polyethylene",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 10.17,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.156319"
+    },
+    {
+      "material_id": 18569.0,
+      "description": "1/200/192 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.13,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.156870"
+    },
+    {
+      "material_id": 18576.0,
+      "description": "20/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 13.36,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.157490"
+    },
+    {
+      "material_id": 14148.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 7.24,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.157987"
+    },
+    {
+      "material_id": 18438.0,
+      "description": "20/1 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 8.08,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.158412"
+    },
+    {
+      "material_id": 18426.0,
+      "description": "24/1 100% Bamboo",
+      "base_material": "BAMBOO",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.17,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.158845"
+    },
+    {
+      "material_id": 11999.0,
+      "description": "1/150/48 100% Polyester",
+      "base_material": "POLYESTER",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 9.87,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.159279"
+    },
+    {
+      "material_id": 18334.0,
+      "description": "60/1 100% Combed Cotton",
+      "base_material": "COTTON",
+      "quality_multiplier": 1.0,
+      "is_blend": true,
+      "assigned_cost": 11.24,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.159773"
+    },
+    {
+      "material_id": NaN,
+      "description": "nan nan nan",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": false,
+      "assigned_cost": 15.73,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.160301"
+    },
+    {
+      "material_id": NaN,
+      "description": "nan nan nan",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": false,
+      "assigned_cost": 11.91,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.160849"
+    },
+    {
+      "material_id": NaN,
+      "description": "nan nan nan",
+      "base_material": "DEFAULT",
+      "quality_multiplier": 1.0,
+      "is_blend": false,
+      "assigned_cost": 13.17,
+      "cost_column": "Cost_Pound",
+      "timestamp": "2025-07-13T16:49:45.161272"
+    }
+  ]
+}

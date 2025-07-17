@@ -1,0 +1,61 @@
+{
+  "demand_forecasting": {
+    "status": "success",
+    "mae": 2675.0344027144324,
+    "rmse": 3078.357341074199,
+    "mape": 94.44034400794635,
+    "features_used": [
+      "day_of_week",
+      "day_of_month",
+      "month",
+      "quarter",
+      "is_weekend",
+      "demand_lag_1",
+      "demand_lag_7",
+      "demand_rolling_7",
+      "demand_rolling_30",
+      "Unit Price",
+      "Document"
+    ],
+    "training_samples": 97,
+    "test_samples": 25
+  },
+  "price_prediction": {
+    "status": "success",
+    "mae": 1.255653198212873,
+    "rmse": 1.6171426578491015,
+    "mape": 18.750895689979178,
+    "features_used": [
+      "day_of_week",
+      "day_of_month",
+      "month",
+      "quarter",
+      "Yds_ordered",
+      "demand_rolling_7",
+      "demand_rolling_30"
+    ],
+    "training_samples": 97,
+    "test_samples": 25
+  },
+  "anomaly_detection": {
+    "status": "success",
+    "total_samples": 248,
+    "anomalies_detected": 25,
+    "anomaly_percentage": 10.080645161290322,
+    "features_used": [
+      "cost_per_pound",
+      "inventory_level",
+      "on_order",
+      "inventory_ratio",
+      "cost_inventory_ratio"
+    ]
+  },
+  "training_completed": "2025-07-14T00:29:59.988246",
+  "time_series_records": 122,
+  "supplier_records": 248,
+  "dependencies_used": [
+    "sklearn",
+    "pandas",
+    "numpy"
+  ]
+}

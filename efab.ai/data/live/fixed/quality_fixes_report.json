@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-07-13T16:48:40.471426",
+  "fixes_applied": [
+    {
+      "fix_type": "negative_inventory",
+      "count": 2,
+      "details": "Corrected 2 negative inventory balances to zero"
+    },
+    {
+      "fix_type": "bom_percentage_normalization",
+      "count": 9,
+      "details": "Normalized BOM percentages for 9 styles to sum to 1.0"
+    }
+  ],
+  "issues_resolved": [],
+  "remaining_issues": [],
+  "summary": {
+    "total_fixes_applied": 11,
+    "datasets_processed": 4,
+    "output_location": "datass/fixed/"
+  }
+}

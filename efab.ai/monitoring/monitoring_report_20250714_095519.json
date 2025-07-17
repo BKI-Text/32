@@ -1,0 +1,60 @@
+{
+  "report_timestamp": "2025-07-14T09:55:19.772103",
+  "performance_results": {
+    "demand_forecasting": {
+      "status": "success",
+      "mae": 3165.6398826559243,
+      "rmse": 4338.5136269486,
+      "mape": 48.753322046475866,
+      "baseline_mape": 94.44034400794635,
+      "performance_change": -48.37659417846499,
+      "test_samples": 18,
+      "timestamp": "2025-07-14T09:55:19.696343"
+    },
+    "price_prediction": {
+      "status": "success",
+      "mae": 1.546670505471245,
+      "rmse": 1.8815327717079906,
+      "mape": 22.67470907782988,
+      "baseline_mape": 18.750895689979178,
+      "performance_change": 20.926005097173363,
+      "test_samples": 18,
+      "timestamp": "2025-07-14T09:55:19.724672"
+    },
+    "anomaly_detection": {
+      "status": "success",
+      "anomalies_detected": 25,
+      "total_samples": 248,
+      "detection_rate": 0.10080645161290322,
+      "baseline_detection_rate": 0.10080645161290322,
+      "detection_change": 0.0,
+      "timestamp": "2025-07-14T09:55:19.771818"
+    }
+  },
+  "alerts": [
+    {
+      "model": "demand_forecasting",
+      "type": "performance_degradation",
+      "metric": "mae",
+      "current_value": 3165.6398826559243,
+      "threshold": 2000.0,
+      "severity": "medium",
+      "timestamp": "2025-07-14T09:55:19.772091"
+    },
+    {
+      "model": "price_prediction",
+      "type": "performance_degradation",
+      "metric": "performance_change",
+      "current_value": 20.926005097173363,
+      "threshold": 20,
+      "severity": "high",
+      "timestamp": "2025-07-14T09:55:19.772100"
+    }
+  ],
+  "summary": {
+    "total_models_tested": 3,
+    "models_healthy": 3,
+    "total_alerts": 2,
+    "high_severity_alerts": 1
+  }
+}

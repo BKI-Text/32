@@ -1,0 +1,23 @@
+Beverly Knits Direct ML Model Training Report
+==================================================
+
+Training completed: 2025-07-14 00:28:29
+
+FORECASTING MODELS:
+--------------------
+ARIMA: error
+  Error: No module named 'statsmodels'
+
+PROPHET: error
+  Error: No module named 'statsmodels'
+
+LSTM: error
+  Error: No module named 'statsmodels'
+
+XGBOOST: error
+  Error: No module named 'statsmodels'
+
+RISK ASSESSMENT MODELS:
+--------------------
+Risk Assessment: error
+  Error: name 'MLRiskAssessor' is not defined

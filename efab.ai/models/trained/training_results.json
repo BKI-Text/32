@@ -1,0 +1,32 @@
+{
+  "arima": {
+    "status": "failed",
+    "error": "Training failed"
+  },
+  "prophet": {
+    "status": "failed",
+    "error": "Training failed"
+  },
+  "lstm": {
+    "status": "failed",
+    "error": "Training failed"
+  },
+  "xgboost": {
+    "status": "failed",
+    "error": "Training failed"
+  },
+  "risk_assessment": {
+    "status": "error",
+    "error": "Input contains NaN"
+  },
+  "training_completed": "2025-07-14T00:26:43.086464",
+  "data_sources_used": [
+    "sales",
+    "demand",
+    "inventory",
+    "bom",
+    "suppliers"
+  ],
+  "time_series_records": 176,
+  "supplier_records": 248
+}

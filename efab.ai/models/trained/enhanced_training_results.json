@@ -1,0 +1,52 @@
+{
+  "training_started": "2025-07-14T09:51:52.600775",
+  "data_records": 122,
+  "available_libraries": {
+    "statsmodels": false,
+    "prophet": false,
+    "tensorflow": false
+  },
+  "arima": {
+    "status": "skipped",
+    "reason": "statsmodels not available"
+  },
+  "prophet": {
+    "status": "skipped",
+    "reason": "prophet not available"
+  },
+  "lstm": {
+    "status": "skipped",
+    "reason": "tensorflow not available"
+  },
+  "ensemble": {
+    "status": "success",
+    "models_trained": [
+      "random_forest",
+      "gradient_boosting",
+      "linear_regression"
+    ],
+    "ensemble_metrics": {
+      "mae": 3026.965544424506,
+      "rmse": 3300.821635656254,
+      "mape": 123.72728600237681
+    },
+    "individual_models": {
+      "random_forest": {
+        "mae": 3017.321578947368,
+        "rmse": 3306.624090623165,
+        "mape": 110.20251937786925
+      },
+      "gradient_boosting": {
+        "mae": 3094.55130701144,
+        "rmse": 3711.2501044246324,
+        "mape": 109.87017292063983
+      },
+      "linear_regression": {
+        "mae": 3153.1531684305687,
+        "rmse": 3651.732097352522,
+        "mape": 155.70212294692692
+      }
+    }
+  },
+  "training_completed": "2025-07-14T09:51:54.234731"
+}

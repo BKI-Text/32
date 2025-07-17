@@ -1,0 +1,25 @@
+{
+  "arima": {
+    "status": "error",
+    "error": "No module named 'statsmodels'"
+  },
+  "prophet": {
+    "status": "error",
+    "error": "No module named 'statsmodels'"
+  },
+  "lstm": {
+    "status": "error",
+    "error": "No module named 'statsmodels'"
+  },
+  "xgboost": {
+    "status": "error",
+    "error": "No module named 'statsmodels'"
+  },
+  "risk_assessment": {
+    "status": "error",
+    "error": "name 'MLRiskAssessor' is not defined"
+  },
+  "training_completed": "2025-07-14T00:28:29.498451",
+  "time_series_records": 176,
+  "supplier_records": 248
+}
