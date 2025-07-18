@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-07-18T03:37:16.212205",
+  "readiness_level": "NOT_READY",
+  "readiness_score": 8.333333333333332,
+  "total_tests": 24,
+  "passed_tests": 2,
+  "failed_tests": 22,
+  "test_results": {
+    "api_endpoints": "FAILED: attempted relative import beyond top-level package",
+    "test_api_endpoints": "FAILED: API endpoints failed: attempted relative import beyond top-level package",
+    "authentication_system": "FAILED: No module named 'jose'",
+    "test_authentication_system": "FAILED: Authentication system failed: No module named 'jose'",
+    "cli_functionality": "FAILED: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "test_cli_functionality": "FAILED: CLI functionality failed: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "commercial_quality_gates": "FAILED: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "test_commercial_quality_gates": "FAILED: Commercial quality gates failed: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "configuration_validation": "FAILED: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "test_configuration_validation": "FAILED: Configuration validation failed: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "test_data_dir": "FAILED: 'PosixPath' object is not callable",
+    "data_integration": "PASSED",
+    "database_models": "FAILED: No module named 'sqlalchemy'",
+    "test_database_models": "FAILED: Database models failed: No module named 'sqlalchemy'",
+    "domain_entities": "FAILED: BaseModel.__init__() takes 1 positional argument but 2 were given",
+    "test_domain_entities": "FAILED: Domain entities failed: BaseModel.__init__() takes 1 positional argument but 2 were given",
+    "error_handling": "FAILED: Object of type ErrorCategory is not JSON serializable",
+    "test_error_handling_system": "FAILED: Error handling system failed: Object of type ErrorCategory is not JSON serializable",
+    "ml_components": "FAILED: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "test_ml_components": "FAILED: ML components failed: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "planning_engine": "FAILED: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "test_planning_engine": "FAILED: Planning engine failed: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "test_results": "FAILED: 'dict' object is not callable",
+    "validation_framework": "PASSED"
+  },
+  "critical_components": {
+    "configuration_validation": "FAILED: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "error_handling": "FAILED: Object of type ErrorCategory is not JSON serializable",
+    "authentication_system": "FAILED: No module named 'jose'",
+    "planning_engine": "FAILED: `BaseSettings` has been moved to the `pydantic-settings` package. See https://docs.pydantic.dev/2.11/migration/#basesettings-has-moved-to-pydantic-settings for more details.\n\nFor further information visit https://errors.pydantic.dev/2.11/u/import-error",
+    "api_endpoints": "FAILED: attempted relative import beyond top-level package"
+  },
+  "recommendations": [
+    "Address all failing tests before production deployment",
+    "Implement additional error handling and validation",
+    "Complete core functionality implementation",
+    "Fix failing components: api_endpoints, test_api_endpoints, authentication_system, test_authentication_system, cli_functionality, test_cli_functionality, commercial_quality_gates, test_commercial_quality_gates, configuration_validation, test_configuration_validation, test_data_dir, database_models, test_database_models, domain_entities, test_domain_entities, error_handling, test_error_handling_system, ml_components, test_ml_components, planning_engine, test_planning_engine, test_results",
+    "Ensure all secrets are properly configured for production",
+    "Review and test all authentication and authorization flows",
+    "Verify all input validation is working correctly",
+    "Test error handling in production-like environment"
+  ]
+}

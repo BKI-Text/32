@@ -1,5 +1,11 @@
-from .settings import PLANNING_CONFIG, PlanningConfig
-from .config_manager import get_config, config_manager
+"""Configuration module for Beverly Knits AI Supply Chain Planner"""
+
+from .config_manager import ConfigManager, config_manager
+from .settings import settings, Settings, PLANNING_CONFIG, PlanningConfig
+from .environment_loader import EnvironmentLoader, load_environment_config
+from .validator import ConfigurationValidator, validate_current_environment
+
+# Legacy compatibility imports
 from .environment_config import (
     EnvironmentConfigManager, 
     get_config as get_env_config,
@@ -10,11 +16,25 @@ from .environment_config import (
     get_streamlit_config
 )
 
+def get_config():
+    """Legacy compatibility function"""
+    return config_manager.config
+
 __all__ = [
-    "PLANNING_CONFIG", 
-    "PlanningConfig", 
+    # New configuration system
+    "ConfigManager",
+    "config_manager", 
+    "settings",
+    "Settings",
+    "PLANNING_CONFIG",
+    "PlanningConfig",
+    "EnvironmentLoader",
+    "load_environment_config",
+    "ConfigurationValidator",
+    "validate_current_environment",
+    
+    # Legacy compatibility
     "get_config",
-    "config_manager",
     "EnvironmentConfigManager",
     "get_env_config",
     "get_planning_config",

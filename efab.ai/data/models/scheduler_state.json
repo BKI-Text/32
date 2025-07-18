@@ -1,0 +1,55 @@
+{
+  "configs": {
+    "GLOBAL_TEST": {
+      "model_id": "GLOBAL_TEST",
+      "model_type": "Test",
+      "performance_threshold": 0.8,
+      "data_drift_threshold": 0.3,
+      "max_age_days": 1,
+      "min_data_points": 100,
+      "retraining_interval_hours": 24,
+      "enabled": true
+    }
+  },
+  "jobs": {},
+  "metrics_history": {
+    "GLOBAL_TEST": [
+      {
+        "model_id": "GLOBAL_TEST",
+        "model_type": "Test",
+        "accuracy": 0.83,
+        "mae": 0.09964004402623283,
+        "mse": 0.015200442039011074,
+        "rmse": 0.12329007275126036,
+        "r2_score": 0.9851757006872995,
+        "last_updated": "2025-07-18T04:26:56.446822",
+        "data_points": 50,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "GLOBAL_TEST",
+        "model_type": "Test",
+        "accuracy": 0.8099999999999999,
+        "mae": 0.10679102106644123,
+        "mse": 0.015484142363997215,
+        "rmse": 0.12443529388399907,
+        "r2_score": 0.984899020672211,
+        "last_updated": "2025-07-18T04:26:57.450879",
+        "data_points": 50,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "GLOBAL_TEST",
+        "model_type": "Test",
+        "accuracy": 0.7899999999999999,
+        "mae": 0.12671191139005444,
+        "mse": 0.023606082143512022,
+        "rmse": 0.15364270937311678,
+        "r2_score": 0.9769780624538743,
+        "last_updated": "2025-07-18T04:27:00.561130",
+        "data_points": 50,
+        "confidence_interval": 0.95
+      }
+    ]
+  }
+}
