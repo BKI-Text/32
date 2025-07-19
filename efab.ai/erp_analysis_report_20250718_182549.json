@@ -1,0 +1,804 @@
+{
+  "analysis_metadata": {
+    "timestamp": "2025-07-18T18:25:49.505618",
+    "erp_system": "Efab ERP",
+    "base_url": "https://efab.bkiapps.com",
+    "analysis_version": "1.0"
+  },
+  "executive_summary": {
+    "endpoints_analyzed": 5,
+    "total_fields_discovered": 121,
+    "entities_mappable": 4,
+    "integration_feasibility": "HIGH"
+  },
+  "detailed_analysis": {
+    "yarn_inventory": {
+      "endpoint": "/yarn",
+      "content_length": 34851,
+      "summary": "2 tables, 1 forms, DevExtreme grids, JavaScript data",
+      "tables": {
+        "count": 2,
+        "headers": [
+          "note",
+          "pbalance",
+          "t_balance",
+          "delta",
+          "onorder",
+          "misc",
+          "cost_avg",
+          "qs_yarn_customer_code",
+          "added",
+          "adjustments",
+          "supplier",
+          "allocated",
+          "color_name",
+          "cost_total",
+          "description",
+          "reconciled_qty",
+          "consumed",
+          "desc_number",
+          "reconciled_date"
+        ]
+      },
+      "forms": {
+        "count": 1,
+        "fields": [
+          "navDetails",
+          "viewport",
+          "popupFormDiv",
+          "subForm",
+          "search_string",
+          "yarnInventory",
+          "search_form",
+          "yarnInfoPopup"
+        ]
+      },
+      "data_indicators": {
+        "has_devextreme": true,
+        "has_datatables": false,
+        "has_js_data": true,
+        "input_count": 1
+      },
+      "field_names": [
+        "note",
+        "navDetails",
+        "pbalance",
+        "t_balance",
+        "delta",
+        "onorder",
+        "misc",
+        "cost_avg",
+        "qs_yarn_customer_code",
+        "added",
+        "adjustments",
+        "search_form",
+        "supplier",
+        "allocated",
+        "viewport",
+        "popupFormDiv",
+        "yarnInventory",
+        "color_name",
+        "cost_total",
+        "description",
+        "reconciled_qty",
+        "consumed",
+        "subForm",
+        "desc_number",
+        "search_string",
+        "reconciled_date",
+        "yarnInfoPopup"
+      ]
+    },
+    "yarn_demand": {
+      "endpoint": "/report/yarn_demand",
+      "content_length": 29119,
+      "summary": "1 forms, DevExtreme grids, JavaScript data",
+      "tables": {
+        "count": 0,
+        "headers": [
+          "yarn_desc",
+          "count_4",
+          "count_2",
+          "percent",
+          "count_7",
+          "count_6",
+          "total",
+          "count_1",
+          "later",
+          "style",
+          "count_8",
+          "count_5",
+          "count_3",
+          "count_0"
+        ]
+      },
+      "forms": {
+        "count": 1,
+        "fields": [
+          "reportGrid",
+          "navDetails",
+          "viewport",
+          "search_string",
+          "search_form"
+        ]
+      },
+      "data_indicators": {
+        "has_devextreme": true,
+        "has_datatables": false,
+        "has_js_data": true,
+        "input_count": 1
+      },
+      "field_names": [
+        "navDetails",
+        "reportGrid",
+        "count_2",
+        "count_5",
+        "count_0",
+        "count_4",
+        "percent",
+        "total",
+        "later",
+        "search_form",
+        "yarn_desc",
+        "viewport",
+        "count_1",
+        "count_7",
+        "count_6",
+        "search_string",
+        "style",
+        "count_8",
+        "count_3"
+      ]
+    },
+    "expected_yarn": {
+      "endpoint": "/report/expected_yarn",
+      "content_length": 30906,
+      "summary": "1 forms, DevExtreme grids, JavaScript data",
+      "tables": {
+        "count": 0,
+        "headers": [
+          "count_2",
+          "yarn.color_name",
+          "yarn.ply",
+          "count_5",
+          "count_0",
+          "serial_number_link",
+          "count_4",
+          "serial_number",
+          "past_due",
+          "yarn.filament",
+          "yarn.desc_number",
+          "yarn.yarn_type.name",
+          "qty_received",
+          "yarn.reconciled_qty",
+          "qty_ordered",
+          "unit_price",
+          "balance",
+          "count_1",
+          "count_9",
+          "created_date",
+          "count_7",
+          "yarn.blend_perc",
+          "count_6",
+          "yarn.size",
+          "count_8",
+          "purchased_from.long_name",
+          "count_3"
+        ]
+      },
+      "forms": {
+        "count": 1,
+        "fields": [
+          "reportGrid",
+          "navDetails",
+          "viewport",
+          "search_string",
+          "search_form"
+        ]
+      },
+      "data_indicators": {
+        "has_devextreme": true,
+        "has_datatables": false,
+        "has_js_data": true,
+        "input_count": 1
+      },
+      "field_names": [
+        "navDetails",
+        "reportGrid",
+        "count_2",
+        "yarn.color_name",
+        "yarn.ply",
+        "count_5",
+        "count_0",
+        "serial_number_link",
+        "count_4",
+        "serial_number",
+        "past_due",
+        "yarn.filament",
+        "yarn.desc_number",
+        "search_form",
+        "yarn.yarn_type.name",
+        "qty_received",
+        "yarn.reconciled_qty",
+        "qty_ordered",
+        "viewport",
+        "unit_price",
+        "balance",
+        "count_1",
+        "count_9",
+        "created_date",
+        "count_7",
+        "yarn.blend_perc",
+        "count_6",
+        "yarn.size",
+        "search_string",
+        "count_8",
+        "purchased_from.long_name",
+        "count_3"
+      ]
+    },
+    "fabric_orders": {
+      "endpoint": "/fabric/so/list",
+      "content_length": 37724,
+      "summary": "1 forms, DevExtreme grids, JavaScript data",
+      "tables": {
+        "count": 0,
+        "headers": [
+          "ship_to",
+          "status",
+          "cf_version.code",
+          "serial_number",
+          "requested_date",
+          "shipping_order.shipped_dt",
+          "unit_price",
+          "created",
+          "shipped",
+          "sales_order_plan_line.f_version.f_base.base_style",
+          "actions",
+          "csr_released",
+          "qty",
+          "pick_available",
+          "effective_purchase_order",
+          "sop",
+          "quoted_date"
+        ]
+      },
+      "forms": {
+        "count": 1,
+        "fields": [
+          "cacheAge",
+          "holdButton_",
+          "navDetails",
+          "viewport",
+          "search_string",
+          "search_form",
+          "fabricInfoPopup",
+          "fabricSOs"
+        ]
+      },
+      "data_indicators": {
+        "has_devextreme": true,
+        "has_datatables": false,
+        "has_js_data": true,
+        "input_count": 1
+      },
+      "field_names": [
+        "cacheAge",
+        "cf_version.code",
+        "requested_date",
+        "shipping_order.shipped_dt",
+        "navDetails",
+        "sales_order_plan_line.f_version.f_base.base_style",
+        "actions",
+        "csr_released",
+        "fabricInfoPopup",
+        "fabricSOs",
+        "serial_number",
+        "search_form",
+        "sop",
+        "ship_to",
+        "holdButton_",
+        "quoted_date",
+        "status",
+        "viewport",
+        "unit_price",
+        "shipped",
+        "pick_available",
+        "created",
+        "search_string",
+        "effective_purchase_order",
+        "qty"
+      ]
+    },
+    "yarn_po": {
+      "endpoint": "/yarn/po/list",
+      "content_length": 30964,
+      "summary": "2 tables, 1 forms, DevExtreme grids, JavaScript data",
+      "tables": {
+        "count": 2,
+        "headers": [
+          "qty_ordered",
+          "requested_date",
+          "created_date",
+          "serial_number",
+          "totalPrice",
+          "unit_price",
+          "yarn.description",
+          "yarn.color_name",
+          "yarn.desc_number",
+          "purchased_from.name",
+          "yarn.yarn_type.name",
+          "quoted_date"
+        ]
+      },
+      "forms": {
+        "count": 1,
+        "fields": [
+          "navDetails",
+          "viewport",
+          "search_string",
+          "yarnInventory",
+          "search_form",
+          "yarnInfoPopup"
+        ]
+      },
+      "data_indicators": {
+        "has_devextreme": true,
+        "has_datatables": false,
+        "has_js_data": true,
+        "input_count": 1
+      },
+      "field_names": [
+        "qty_ordered",
+        "requested_date",
+        "created_date",
+        "serial_number",
+        "totalPrice",
+        "viewport",
+        "navDetails",
+        "unit_price",
+        "yarn.description",
+        "yarn.color_name",
+        "search_string",
+        "yarnInventory",
+        "yarn.desc_number",
+        "yarnInfoPopup",
+        "purchased_from.name",
+        "search_form",
+        "yarn.yarn_type.name",
+        "quoted_date"
+      ]
+    }
+  },
+  "entity_mappings": {
+    "materials": {
+      "potential_fields": [
+        "yarn_id",
+        "item_id",
+        "description",
+        "type",
+        "blend",
+        "color",
+        "cost",
+        "price"
+      ],
+      "domain_fields": [
+        "material_id",
+        "name",
+        "material_type",
+        "specifications",
+        "cost"
+      ],
+      "found_fields": [
+        {
+          "erp_field": "cost_avg",
+          "endpoint": "yarn_inventory",
+          "matched_pattern": "cost"
+        },
+        {
+          "erp_field": "color_name",
+          "endpoint": "yarn_inventory",
+          "matched_pattern": "color"
+        },
+        {
+          "erp_field": "cost_total",
+          "endpoint": "yarn_inventory",
+          "matched_pattern": "cost"
+        },
+        {
+          "erp_field": "description",
+          "endpoint": "yarn_inventory",
+          "matched_pattern": "description"
+        },
+        {
+          "erp_field": "yarn.color_name",
+          "endpoint": "expected_yarn",
+          "matched_pattern": "color"
+        },
+        {
+          "erp_field": "yarn.yarn_type.name",
+          "endpoint": "expected_yarn",
+          "matched_pattern": "type"
+        },
+        {
+          "erp_field": "unit_price",
+          "endpoint": "expected_yarn",
+          "matched_pattern": "price"
+        },
+        {
+          "erp_field": "yarn.blend_perc",
+          "endpoint": "expected_yarn",
+          "matched_pattern": "blend"
+        },
+        {
+          "erp_field": "unit_price",
+          "endpoint": "fabric_orders",
+          "matched_pattern": "price"
+        },
+        {
+          "erp_field": "totalPrice",
+          "endpoint": "yarn_po",
+          "matched_pattern": "price"
+        },
+        {
+          "erp_field": "unit_price",
+          "endpoint": "yarn_po",
+          "matched_pattern": "price"
+        },
+        {
+          "erp_field": "yarn.description",
+          "endpoint": "yarn_po",
+          "matched_pattern": "description"
+        },
+        {
+          "erp_field": "yarn.color_name",
+          "endpoint": "yarn_po",
+          "matched_pattern": "color"
+        },
+        {
+          "erp_field": "yarn.yarn_type.name",
+          "endpoint": "yarn_po",
+          "matched_pattern": "type"
+        }
+      ]
+    },
+    "suppliers": {
+      "potential_fields": [
+        "supplier_id",
+        "supplier",
+        "vendor",
+        "lead_time",
+        "moq",
+        "reliability"
+      ],
+      "domain_fields": [
+        "supplier_id",
+        "name",
+        "lead_time_days",
+        "min_order_quantity",
+        "reliability_score"
+      ],
+      "found_fields": [
+        {
+          "erp_field": "supplier",
+          "endpoint": "yarn_inventory",
+          "matched_pattern": "supplier"
+        }
+      ]
+    },
+    "inventory": {
+      "potential_fields": [
+        "inventory",
+        "on_hand",
+        "available",
+        "on_order",
+        "allocated",
+        "safety_stock"
+      ],
+      "domain_fields": [
+        "on_hand_quantity",
+        "available_quantity",
+        "open_po_quantity",
+        "allocated_quantity"
+      ],
+      "found_fields": [
+        {
+          "erp_field": "allocated",
+          "endpoint": "yarn_inventory",
+          "matched_pattern": "allocated"
+        },
+        {
+          "erp_field": "yarnInventory",
+          "endpoint": "yarn_inventory",
+          "matched_pattern": "inventory"
+        },
+        {
+          "erp_field": "pick_available",
+          "endpoint": "fabric_orders",
+          "matched_pattern": "available"
+        },
+        {
+          "erp_field": "yarnInventory",
+          "endpoint": "yarn_po",
+          "matched_pattern": "inventory"
+        }
+      ]
+    },
+    "orders": {
+      "potential_fields": [
+        "order_id",
+        "so_number",
+        "customer",
+        "quantity",
+        "due_date",
+        "status"
+      ],
+      "domain_fields": [
+        "order_id",
+        "customer_name",
+        "quantity",
+        "required_date",
+        "status"
+      ],
+      "found_fields": [
+        {
+          "erp_field": "qs_yarn_customer_code",
+          "endpoint": "yarn_inventory",
+          "matched_pattern": "customer"
+        },
+        {
+          "erp_field": "status",
+          "endpoint": "fabric_orders",
+          "matched_pattern": "status"
+        }
+      ]
+    },
+    "forecasts": {
+      "potential_fields": [
+        "demand",
+        "forecast",
+        "period",
+        "confidence",
+        "expected"
+      ],
+      "domain_fields": [
+        "demand_quantity",
+        "forecast_period",
+        "confidence_score"
+      ],
+      "found_fields": []
+    }
+  },
+  "integration_plan": {
+    "priority_endpoints": [
+      {
+        "endpoint": "yarn_inventory",
+        "score": 99,
+        "priority": "HIGH"
+      },
+      {
+        "endpoint": "expected_yarn",
+        "score": 89,
+        "priority": "HIGH"
+      },
+      {
+        "endpoint": "yarn_po",
+        "score": 81,
+        "priority": "HIGH"
+      },
+      {
+        "endpoint": "fabric_orders",
+        "score": 75,
+        "priority": "HIGH"
+      },
+      {
+        "endpoint": "yarn_demand",
+        "score": 63,
+        "priority": "HIGH"
+      }
+    ],
+    "data_extraction_strategy": {
+      "yarn_inventory": [
+        "DevExtreme grid API extraction",
+        "HTML table parsing",
+        "JavaScript data extraction"
+      ],
+      "yarn_demand": [
+        "DevExtreme grid API extraction",
+        "JavaScript data extraction"
+      ],
+      "expected_yarn": [
+        "DevExtreme grid API extraction",
+        "JavaScript data extraction"
+      ],
+      "fabric_orders": [
+        "DevExtreme grid API extraction",
+        "JavaScript data extraction"
+      ],
+      "yarn_po": [
+        "DevExtreme grid API extraction",
+        "HTML table parsing",
+        "JavaScript data extraction"
+      ]
+    },
+    "entity_integration_plan": {
+      "materials": {
+        "field_mappings": [
+          {
+            "erp_field": "cost_avg",
+            "endpoint": "yarn_inventory",
+            "matched_pattern": "cost"
+          },
+          {
+            "erp_field": "color_name",
+            "endpoint": "yarn_inventory",
+            "matched_pattern": "color"
+          },
+          {
+            "erp_field": "cost_total",
+            "endpoint": "yarn_inventory",
+            "matched_pattern": "cost"
+          },
+          {
+            "erp_field": "description",
+            "endpoint": "yarn_inventory",
+            "matched_pattern": "description"
+          },
+          {
+            "erp_field": "yarn.color_name",
+            "endpoint": "expected_yarn",
+            "matched_pattern": "color"
+          },
+          {
+            "erp_field": "yarn.yarn_type.name",
+            "endpoint": "expected_yarn",
+            "matched_pattern": "type"
+          },
+          {
+            "erp_field": "unit_price",
+            "endpoint": "expected_yarn",
+            "matched_pattern": "price"
+          },
+          {
+            "erp_field": "yarn.blend_perc",
+            "endpoint": "expected_yarn",
+            "matched_pattern": "blend"
+          },
+          {
+            "erp_field": "unit_price",
+            "endpoint": "fabric_orders",
+            "matched_pattern": "price"
+          },
+          {
+            "erp_field": "totalPrice",
+            "endpoint": "yarn_po",
+            "matched_pattern": "price"
+          },
+          {
+            "erp_field": "unit_price",
+            "endpoint": "yarn_po",
+            "matched_pattern": "price"
+          },
+          {
+            "erp_field": "yarn.description",
+            "endpoint": "yarn_po",
+            "matched_pattern": "description"
+          },
+          {
+            "erp_field": "yarn.color_name",
+            "endpoint": "yarn_po",
+            "matched_pattern": "color"
+          },
+          {
+            "erp_field": "yarn.yarn_type.name",
+            "endpoint": "yarn_po",
+            "matched_pattern": "type"
+          }
+        ],
+        "confidence": "HIGH",
+        "implementation_notes": "Found 14 relevant fields"
+      },
+      "suppliers": {
+        "field_mappings": [
+          {
+            "erp_field": "supplier",
+            "endpoint": "yarn_inventory",
+            "matched_pattern": "supplier"
+          }
+        ],
+        "confidence": "LOW",
+        "implementation_notes": "Found 1 relevant fields"
+      },
+      "inventory": {
+        "field_mappings": [
+          {
+            "erp_field": "allocated",
+            "endpoint": "yarn_inventory",
+            "matched_pattern": "allocated"
+          },
+          {
+            "erp_field": "yarnInventory",
+            "endpoint": "yarn_inventory",
+            "matched_pattern": "inventory"
+          },
+          {
+            "erp_field": "pick_available",
+            "endpoint": "fabric_orders",
+            "matched_pattern": "available"
+          },
+          {
+            "erp_field": "yarnInventory",
+            "endpoint": "yarn_po",
+            "matched_pattern": "inventory"
+          }
+        ],
+        "confidence": "HIGH",
+        "implementation_notes": "Found 4 relevant fields"
+      },
+      "orders": {
+        "field_mappings": [
+          {
+            "erp_field": "qs_yarn_customer_code",
+            "endpoint": "yarn_inventory",
+            "matched_pattern": "customer"
+          },
+          {
+            "erp_field": "status",
+            "endpoint": "fabric_orders",
+            "matched_pattern": "status"
+          }
+        ],
+        "confidence": "MEDIUM",
+        "implementation_notes": "Found 2 relevant fields"
+      }
+    },
+    "technical_requirements": [
+      "Session-based authentication with form login",
+      "HTML parsing for table data extraction",
+      "DevExtreme data grid API integration",
+      "JavaScript execution for dynamic data",
+      "Data validation and quality checks",
+      "Error handling and retry mechanisms"
+    ],
+    "estimated_timeline": {
+      "Phase 1 - Authentication Setup": "3-5 days",
+      "Phase 2 - Data Extraction Development": "1-2 weeks",
+      "Phase 3 - Domain Entity Mapping": "3-5 days",
+      "Phase 4 - Integration Testing": "3-5 days",
+      "Phase 5 - Production Deployment": "2-3 days",
+      "Total Estimated Time": "3-4 weeks"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "Data Integration",
+      "title": "Focus on high-value endpoints first",
+      "description": "Start with 5 endpoints that have the richest data structures",
+      "action_items": [
+        "yarn_inventory",
+        "expected_yarn",
+        "yarn_po",
+        "fabric_orders",
+        "yarn_demand"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "category": "Technical Implementation",
+      "title": "Implement DevExtreme grid data extraction",
+      "description": "Develop specialized handling for 5 endpoints using DevExtreme",
+      "technical_notes": "Consider using browser automation or finding API endpoints for structured data access"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Data Modeling",
+      "title": "Prioritize complete entity mappings",
+      "description": "Focus on 2 entities with sufficient field mappings",
+      "entities": [
+        "materials",
+        "inventory"
+      ]
+    }
+  ]
+}

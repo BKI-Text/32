@@ -1,0 +1,1249 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>eFab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/cfab.css">
+  <link rel="stylesheet" href="/css/print.css" media="print">
+  <link rel="stylesheet" href="/css/vendor/font-awesome.min.css">
+  <script src="/js/vendor/jquery.min.js"></script>
+  <script src="/js/vendor/jquery.growl.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/vendor/jquery.growl.css" />
+  <link rel="stylesheet" type="text/css" href="/css/vendor/dx.common.css" />
+  <link rel="dx-theme" data-theme="generic.light" href="/css/vendor/dx.light.css" />
+  <script src="/js/vendor/jszip.min.js"></script>
+  <script src="/js/vendor/mousetrap.min.js"></script>
+  <script src="/js/vendor/dx.all.js"></script>
+  <script src="/js/vendor/foundation.min.js"></script>
+  <script src="/js/efab.js"></script>
+  <script>
+    function integerWithCommas(x) {
+      if (x) {
+        return parseInt(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      } else {
+        return '';
+      }
+    }
+    $(function() {
+      // ShortCuts
+      Mousetrap.bind('s', function() { $('input[name=search_string]').select(); return false; });
+    });
+  </script>
+
+  <script>
+    // jQuery plugin to prevent double submission of forms
+    jQuery.fn.preventDoubleSubmission = function() {
+      var $form = $(this);
+	   // Only add this function once!
+	   if ($form.data('function_added') === true) {
+		  return this;
+		} else {
+		  $form.data('function_added', true);
+		}
+      $(this).on('submit',function(e){
+        if ($form.data('submitted') === true) {
+          // Previously submitted - don't submit again
+          alert('Please do not double click on buttons.  Thanks!');
+          e.preventDefault();
+        } else {
+          // Mark it so that the next submit can be ignored
+          $form.data('submitted', true);
+          $('button.changeOnSubmit').text('Submitting...');
+        }
+      });
+      // Keep chainability
+      return this;
+    };
+
+    
+  </script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+<!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+  <div class="pageContainer">
+    
+<header>
+  <div class="logo">
+    <img src="/img/eFab-Logo-Rev.png">
+  </div>
+  
+  <div class="noJobTab">
+    <form id="search_form" action="/search" method="post">
+      <input class="search allowSubmitOnEnter" name="search_string" type="input" placeHolder="Search" onkeydown="searchKeyDown(event, this);">
+    </form>
+  </div>
+  
+  <div class="subNav" align="right">
+    <ul>
+      <li><a href="/logout" title="Log Out">Log Out</a></li>
+      <li><a href="#" title="Change Password">My Account</a></li>
+     
+      <li><a href="/admin" title="Admin">Admin</a></li>
+     
+  
+      <li><a href="/" title="Jobs List" title="Home">CFAB <i class="fa fa-home"></i></a></li>
+    </ul>
+  </div>
+  
+  <script>
+    $(document).ready(function() {
+      /* Set the number of Alerts */
+      $('#alertBell').addClass('showBell').attr('data-after',4);
+
+      /* Set the button action to close a job folder */
+      $('#clear-job').on('click', function() {
+        $.ajax({
+          url: '/api/clear-job',
+          type: 'POST',
+          success: function(data) {
+            $('.jobTab').hide();
+            $('.mainContent').removeClass('manila');
+          },
+          error: function(event, stat, error) {
+            var str = 'JSON request failed. Status: ' + stat + ' Error: ' + error;
+            console.log(str);
+          },
+        });
+      });
+    });
+  </script>
+  
+</header>
+
+    <div class="mainContainer">
+      <div class="mainNav">
+        
+
+<nav></nav>
+<div id="navDetails" class="hidden">
+  <div class="name"></div>
+</div>
+<div class="favorites-nav" style="width: 200px !important"></div>
+
+<script>
+var menuData = [
+  {
+    id: "10",
+    name: "Dashboard",
+    link: "/dashboard",
+    disabled: 0,
+  }, {
+    id: "20",
+    name: "Sales Orders",
+    link: "/fabric/so/list",
+    disabled: 0,
+    items: [
+      {
+        id: "20_1",
+        name: "List",
+        link: "/fabric/so/list",
+        disabled: 0,
+      }, {
+        id: "20_2",
+        name: "Finished Create",
+        link: "/fabric/sop/create",
+        disabled: 0,
+      }, {
+        id: "20_3",
+        name: "Greige Create",
+        link: "/fabric/gsop/create",
+        disabled: 0,
+      }, {
+        id: "20_4",
+        name: "Returns",
+        link: "/return/list",
+        disabled: 0,
+      }
+    ]
+  },{
+    id: "30",
+    name: "Inventory",
+    link: "/yarn",
+    disabled: 0,
+    items: [
+      {
+        id: "30_1",
+        name: "Yarn",
+        link: "/yarn",
+        disabled: 0,
+      }, {
+        id: "30_2",
+        name: "G00",
+        link: "/fabric/greige/list/g00",
+        disabled: 0,
+      }, {
+        id: "30_3",
+        name: "G02",
+        link: "/fabric/greige/list/g02",
+        disabled: 0,
+      }, {
+        id: "30_3_1",
+        name: "G04",
+        link: "/fabric/greige/list/g04",
+        disabled: 0,
+      }, {
+        id: "30_3_2",
+        name: "G09",
+        link: "/fabric/greige/list/g09",
+        disabled: 0,
+      }, {
+        id: "30_4",
+        name: "I01",
+        link: "/fabric/finished/list/i01",
+        disabled: 0,
+      }, {
+        id: "30_5",
+        name: "F01",
+        link: "/fabric/finished/list/f01",
+        disabled: 0,
+      }, {
+        id: "30_5a",
+        name: "F02",
+        link: "/fabric/finished/list/f02",
+        disabled: 0,
+      }, {
+        id: "30_5b",
+        name: "F04",
+        link: "/fabric/finished/list/f04",
+        disabled: 0,
+      }, {
+        id: "30_5c",
+        name: "F05",
+        link: "/fabric/finished/list/f05",
+        disabled: 0,
+      }, {
+        id: "30_5d",
+        name: "F06",
+        link: "/fabric/finished/list/f06",
+        disabled: 0,
+      }, {
+        id: "30_5e",
+        name: "F07",
+        link: "/fabric/finished/list/f07",
+        disabled: 0,
+      }, {
+        id: "30_6",
+        name: "F08",
+        link: "/fabric/finished/list/f08",
+        disabled: 0,
+      }, {
+        id: "30_7",
+        name: "F09",
+        link: "/fabric/finished/list/f09",
+        disabled: 0,
+      }, {
+        id: "30_8",
+        name: "P01",
+        link: "/fabric/finished/list/p01",
+        disabled: 0,
+      }, {
+        id: "30_8a",
+        name: "S01",
+        link: "/fabric/finished/list/s01",
+        disabled: 0,
+      }, {
+        id: "30_8b",
+        name: "T01",
+        link: "/fabric/finished/list/t01",
+        disabled: 0,
+      }, {
+        id: "30_9",
+        name: "BH",
+        link: "/fabric/finished/list/bh",
+        disabled: 0,
+      }
+    ]
+  },{
+    id: "40",
+    name: "Inquiry",
+    link: "/styles/inquiry",
+    disabled: 0,
+  },{
+    id: "50",
+    name: "Supply Orders",
+    link: "/yarn/po/list",
+    disabled: 0,
+    items: [
+      {
+        id: "50_1",
+        name: "Yarn POs List",
+        link: "/yarn/po/list",
+        disabled: 0,
+      }, {
+        id: "50_2",
+        name: "Yarn Demand Create",
+        link: "/yarn/po/create",
+        disabled: 0,
+      }, {
+        id: "50_3",
+        name: "Greige POs List",
+        link: "/fabric/gpo/list",
+        disabled: 0,
+      }, {
+        id: "50_4",
+        name: "Greige PO Create",
+        link: "/fabric/gpo/create",
+        disabled: 0,
+      }, {
+        id: "50_5",
+        name: "Finshed POs List",
+        link: "/fabric/fpo/list",
+        disabled: 0,
+      }, {
+        id: "50_6",
+        name: "Finished PO Create",
+        link: "/fabric/fpo/create",
+        disabled: 0,
+      }, {
+        id: "50_7",
+        name: "Finished",
+        link: "/fabric/finished/po/list",
+        disabled: 0,
+      }
+    ],
+  },{
+    id: "60",
+    name: "Work Orders",
+    link: "/fabric/knitorder/list",
+    disabled: 0,
+    items: [
+      {
+        id: "60_1",
+        name: "Knit Orders List",
+        link: "/fabric/knitorder/list",
+        disabled: 0,
+      }, {
+        id: "60_2",
+        name: "Knit Order Create",
+        link: "/fabric/knitorder/create",
+        disabled: 0,
+      }, {
+        id: "60_3",
+        name: "Dye Order List",
+        link: "/fabric/dyeorder/list",
+        disabled: 0,
+      }, {
+        id: "60_4",
+        name: "Shipped Dye Orders",
+        link: "/fabric/dyeorder/shipped_list",
+        disabled: 0,
+      }, {
+        id: "60_5",
+        name: "Dye Order Plan Create",
+        link: "/fabric/dop/create",
+        disabled: 0,
+      }, {
+        id: "60_6",
+        name: "Rework Dye Order Plan Create",
+        link: "/fabric/dop/create/rework",
+        disabled: 0,
+      }, {
+        id: "60_7",
+        name: "Production Planning",
+        link: "/production/",
+        disabled: 0,
+        disabled: true,
+      }
+    ],
+  },{
+    id: "70",
+    name: "Ship Orders",
+    link: "/ship",
+    disabled: 0,
+  },{
+    id: "80",
+    name: "SO Ship Queue",
+    link: "/ship/so_queue",
+    disabled: 0,
+  },{
+    id: "90",
+    name: "Accounting",
+    link: "/accounting/list",
+    disabled: 0,
+    items: [
+      {
+        id: "90_1",
+        name: "Receivables",
+        disabled: 0,
+        items: [
+          {
+            id: '90_1a',
+            name: 'Invoices',
+            link: "/accounting/list",
+            disabled: 0,
+        
+          }, {
+            id: '90_1b',
+            name: 'Cash Receipts',
+            link: "/accounting/cash",
+            disabled: 0,
+        
+          }
+        ],
+      }, {
+        id: "90_2",
+        name: "DO Accounts Payable",
+        disabled: 0,
+        items: [
+          {
+            id: "90_2a",
+            name: "Payables List",
+            link: "/accounting/do_payables",
+            disabled: 0,
+          }, {
+            id: "90_2b",
+            name: "Create Payables Invoice",
+            link: "/accounting/do_payables/pinv_create",
+            disabled: 0,
+          }, {
+            id: "90_2c",
+            name: "Completed Payables Invoices",
+            link: "/accounting/do_payables/completed_list",
+            disabled: 0,
+          }, {
+            id: "90_2d",
+            name: "Paid w/ No Finished Fab",
+            link: "/accounting/do_payables/paid_no_finfab",
+            disabled: 0,
+          }, {
+            id: "90_2e",
+            name: "Could Not Upload",
+            link: "/accounting/do_payables/no_upload_list",
+            disabled: 0,
+          },   
+        ]
+      }, {
+        id: "90_3",
+        name: "Yarn Accounts Payable",
+        disabled: 0,
+        items: [
+          {
+            id: "90_3a",
+            name: "Payables List",
+            link: "/accounting/yarn_payables",
+            disabled: 0,
+          }, {
+            id: "90_3b",
+            name: "Create Payables Invoice",
+            link: "/accounting/yarn_payables/pinv_create",
+            disabled: 0,
+          }, {
+            id: "90_3c",
+            name: "Completed Payables Invoices",
+            link: "/accounting/yarn_payables/completed_list",
+            disabled: 0,
+//          }, {
+//            id: "90_3d",
+//            name: "Paid w/ No Yarn Received",
+//            link: "/accounting/yarn_payables/paid_no_rcvd",
+//            disabled: 0,
+          }, {
+            id: "90_2e",
+            name: "Could Not Upload",
+            link: "/accounting/yarn_payables/no_upload_list",
+            disabled: 0,
+          }
+        ]
+    
+      }, {
+        id: "90_4",
+        name: "Sales Commissions",
+        disabled: 0,
+        link: "/accounting/sales_commissions",
+    
+      }
+    ]
+  },{
+    id: "100",
+    name: "Styles",
+    link: "/styles/list",
+    disabled: 0,
+    items: [
+      {
+        id: '100_1',
+        name: 'Styles',
+        link: '/styles/list',
+        disabled: 0,
+      }, {
+        id: '100_2',
+        name: 'Customer Style Codes',
+        link: '/customer_styles',
+        disabled: 0,
+      }
+    ]
+  },{
+    id: "110",
+    name: "Customers",
+    link: "/customer/list",
+    disabled: 0,
+  },{
+    id: "120",
+    name: "Reports",
+    link: "/reports/sales_activity",
+    disabled: 0,
+    items: [
+      { id : "120_0",
+        name: "Reports Queue",
+        link: "/reports/report_queue",
+        disabled: 0, 
+      },
+      {
+        id: "120_1",
+        name: "Sales",
+        disabled: 0,
+        items: [
+          {
+            id: "120_1a",
+            name: "Sales Activity",
+            link: "/reports/sales_activity",
+            disabled: 0,
+          },
+          {
+            id: "120_1b",
+            name: "Cut & Sew Transfers",
+            link: "/reports/cut_and_sew",
+            disabled: 0,
+          },
+        ]
+      },
+      {
+        id: "120_2",
+        name: "Monthly",
+        link: "/reports/rack/by_rack_summary",
+        disabled: 0,
+        items: [
+          {
+            id: "120_2a",
+            name: "Inventory Activity (trans)",
+            link: "/reports/inventory_activity",
+            disabled: 0,
+          },
+          {
+            id: "120_2b",
+            name: "Inventory Snapshot (roll)",
+            link: "/reports/inventory_snapshot",
+            disabled: 0,
+          },
+          {
+            id: "120_2c",
+            name: "Work Order Inventory Activity (ko/do)",
+            link: "/reports/workorder",
+            disabled: 0,
+          },
+          {
+            id: "120_2d",
+            name: "Inventory Summary",
+            link: "/reports/inventory_summary",
+            disabled: 0,
+          },
+          {
+            id: "120_2e",
+            name: "Journal Entry",
+            link: "/reports/journal_entry",
+            disabled: 0,
+          },
+          {
+            id: "120_2f",
+            name: "Reporting Anomalies",
+            link: "/reports/report_anomalies",
+            disabled: 0,
+          },
+          {
+            id: "120_2g",
+            name: "History-Changing Transactions",
+            link: "/reports/history_changers",
+            disabled: 0,
+          },
+          {
+            id: "120_2h",
+            name: "Snapshot Working Loss",
+            link: "/reports/snapshot_working_loss",
+            disabled: 0,
+          },
+          {
+            id: "120_2i",
+            name: "Prepaid Finishing",
+            link: "/reports/prepaid_finishing",
+            disabled: 0,
+          },
+        ]
+      },
+      {
+        id: "120_3",
+        name: "Yarns",
+        link: "/report/yarn_transaction",
+        disabled: 0,
+        items: [
+          {
+            id: "120_3a",
+            name: "Transactions",
+            link: "/report/yarn_transaction",
+            disabled: 0,
+          },
+          {
+            id: "120_3b",
+            name: "Actual Receipts",
+            link: "/reports/yarn_receipt",
+            disabled: 0,
+          },
+          {
+            id: "120_3c",
+            name: "Expected Receipts",
+            link: "/report/expected_yarn",
+            disabled: 0,
+          },
+          {
+            id: "120_3d",
+            name: "Costing Summary",
+            link: "/reports/yarn_costing_summary",
+            disabled: 0,
+          },
+          {
+            id: "120_3d_2",
+            name: "Costing Detail",
+            link: "/reports/yarn_costing_detail",
+            disabled: 0,
+          },
+          {
+            id: "120_3e",
+            name: "Valuation Report",
+            link: '/reports/yarn_valuation',
+            disabled: 0,
+          },
+          {
+            id: "120_3f",
+            name: "Yarn in G00",
+            link: '/reports/yarn_in_g00',
+            disabled: 0,
+          },
+          {
+            id: "120_3g",
+            name: "Yarn Accrual",
+            link: '/reports/yarn_accrual',
+            disabled: 0,
+          },
+          {
+            id: "120_3h",
+            name: "Depletion Adjustments",
+            link: '/reports/depletion_adjustment',
+            disabled: 0,
+          },
+          {
+            id: "120_3i",
+            name: "Manual Adjustments",
+            link: '/reports/yarn_adjustment',
+            disabled: 0,
+          },
+          {
+            id: "120_3j",
+            name: "Prior-Period Adjustments",
+            link: '/report/yarn_prior_period',
+            disabled: 0,
+          },
+          {
+            id: "120_3k",
+            name: "Yarn Demand by Style",
+            link: '/report/yarn_demand',
+            disabled: 0,
+          },
+          {
+            id: "120_3l",
+            name: "Yarn Demand Summary",
+            link: '/report/yarn_demand_summary',
+            disabled: 0,
+          },
+        ]
+      },
+      {
+        id: "120_4",
+        name: "Fin Work Loss",
+        link: "/reports/working_loss",
+        disabled: 0,
+        items: [
+          {
+            id: "120_4a",
+            name: "Standard",
+            link: "/reports/working_loss",
+            disabled: 0,
+          },
+          {
+            id: "120_4b",
+            name: "NSA",
+            link: "/reports/nsa_working_loss",
+            disabled: 0,
+          },
+          {
+            id: "120_4c",
+            name: "Discrepancy",
+            link: "/reports/working_loss_discrep",
+            disabled: 0,
+          },
+        ]
+      },
+      {
+        id: "120_5",
+        name: "Rack Sheets",
+        link: "/reports/rack/by_rack_summary",
+        disabled: 0,
+        items: [
+          {
+            id: "120_5a",
+            name: "By Rack Summary",
+            link: "/reports/rack/by_rack_summary",
+            disabled: 0,
+          },
+          {
+            id: "120_5b",
+            name: "By Rack Detail",
+            link: "/reports/rack/by_rack_detail",
+            disabled: 0,
+          },
+          {
+            id: "120_5c",
+            name: "By Style Summary",
+            link: "/reports/rack/by_style_summary",
+            disabled: 0,
+          },
+          {
+            id: "120_5d",
+            name: "I01 Detail",
+            link: "/reports/rack/io1_by_do_detail",
+            disabled: 0,
+          }
+        ]
+      }
+    ]
+  }
+];
+
+$(function(){
+  var favData = [
+    { id: 1, text: "Test Favorite Item 1", icon: "group" },
+  ];
+
+  var $testNav = $('div.favorites-nav');
+
+  let favMenuList = '';
+  favData.map((listItem) => {
+    favMenuList = favMenuList + `<li><a href='#'>${listItem.text}</a></li>`;
+  });
+
+  $testNav.html(`
+    <h3>Favorites</h3>
+    <ul>${favMenuList}</ul>
+  `);
+  
+  var $favButton = $('#favButton, #favButton i.fa-star');
+  var $favMenuIcon = $('#favButton i.fa-star');
+  var $testNavElements = $('div.favorites-nav *');
+
+
+  $('body').off().on('click', function (e) {
+    const $target = $(e.target);
+    if ($target.is($favButton)) {
+      $testNav.toggle();
+      $favMenuIcon.toggleClass('active');
+    } else if ($testNav.css('display') !== 'none' && !$target.is($testNav) && !$target.is($testNavElements)) {
+      $testNav.hide();
+      $favMenuIcon.removeClass('active');
+    }
+  });
+
+
+  // Main nav dxMenu
+  var dxMenu = $("nav").dxMenu({
+    dataSource: menuData,
+    hideSubmenuOnMouseLeave: true,
+    showFirstSubmenuMode: {
+      name: 'onHover',
+      delay: {
+        show: 0,
+        hide: 400,
+      }
+    },
+    displayExpr: 'name',
+    orientation: 'vertical',
+    onItemClick: function (data) {
+      var item = data.itemData;
+      if(item.link) {
+        window.location.href = item.link;
+      }
+    },
+  }).dxMenu("instance");
+
+  
+});
+</script>
+
+      </div>
+      <div class="mainContent">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script>
+    $(function() {
+      $('nav .dx-menu-vertical ul li:nth-of-type(5)').addClass('active');
+    });
+  </script>
+  
+
+<div class="mainContentWrapper">
+  <div class="grid-x">
+    <div class="cell small-3">
+      
+ 
+  <a href="/yarn/po/list"            class="button tabButton active">Yarn</a>
+  <a href="/fabric/gpo/list"         class="button tabButton">Greige</a>
+  <a href="/fabric/fpo/list"         class="button tabButton">Finished</a>
+ 
+
+    </div>
+    <div class="cell small-6">
+      <h4>Yarn Order</h4>
+    </div>
+    <div class="cell small-3"><p style="text-align: center;"><a href="/yarn/po/create" class="button"><i class="fa fa-plus"></i> Create Yarn Demand</a></p></div>
+  </div>
+  
+  
+  <div class="gridContainer">
+    <div id="yarnInventory" class="gridScroll"></div>
+  </div>
+</div>
+
+
+<div id="yarnInfoPopup"></div>
+
+<style>
+#yarnInfoPopup { display: none; }
+</style>
+
+<script>
+function yarnInfo(descNumber) {
+  $.when(
+    $.getJSON("/api/yarn/desc_number/"+descNumber)
+  ).done(function(d1) {
+    $('#yarnInfoPopup').dxPopup({
+      width: 700,
+      height: 600,
+      showTitle: true,
+      title: "Yarn Information",
+      visible: false,
+      dragEnabled: true,
+      closeOnOutsideClick: true,
+      contentTemplate: function() {
+        var markup="<table>";
+        markup += "<table><tr><td>DSDESC</td><td>Description number</td><td>" + d1.desc_number + "</td></tr>";
+        markup += "<tr><td>CVEND</td><td>Yarn supplier</td><td>" + d1.yarn_supplier.name + "</td></tr>";
+        markup += "<tr><td>TYPE</td><td>Type</td><td>" + d1.yarn_type.name + "</td></tr>";
+        markup += "<tr><td>YARNSZ</td><td>Ply</td><td>" + d1.ply + "</td></tr>";
+        markup += "<tr><td>YARNSX</td><td>Size</td><td>" + d1.ply + "</td></tr>";
+        markup += "<tr><td>COLNAM</td><td>Color name</td><td>" + d1.color_name + "</td></tr>";
+        markup += "<tr><td>COLNUM</td><td>Color number</td><td>" + d1.color_num + "</td></tr>";
+        markup += "<tr><td>FILA</td><td>Filament</td><td>" + d1.filament + "</td></tr>";
+        markup += "<tr><td>RS</td><td>Spinning system</td><td>" + d1.spinning_system + "</td></tr>";
+        markup += "<tr><td>BLEND</td><td>Blend</td><td>" + d1.blend + "</td></tr>";
+        markup += "<tr><td>CONE</td><td>Cone weight</td><td>" + d1.cone_wt + "</td></tr>";
+        markup += "<tr><td>DESF1</td><td>Polartec ID</td><td>" + d1.polartec_id + "</td></tr></table>";
+        return markup;
+      },
+    }).dxPopup('instance').show();
+  });
+}
+</script>
+
+
+<script>
+function loadClosedPOs() {
+  const CLOSEDPOS_URL = '/api/yarn-po/closed';
+  const closed_yarn_pos = new DevExpress.data.CustomStore({
+    load: function(loadOptions) {
+      return $.getJSON(CLOSEDPOS_URL);
+    }
+  });
+  dataGrid.option("dataSource",closed_yarn_pos);
+}
+
+
+const SERVICE_URL = '/api/yarn-po';
+const yarn_pos = new DevExpress.data.CustomStore({
+    load: function(loadOptions) {
+        return $.getJSON(SERVICE_URL);
+    },
+/*
+    byKey: function(key) {
+        return $.getJSON(SERVICE_URL + encodeURIComponent(key.id));
+    },
+
+    insert: function(values) {
+        // delete values that start with '__'
+        Object.keys(values).forEach(k => {
+          if(k.match(/^__/)){
+            delete values[k];
+          }
+        });
+        return $.post(SERVICE_URL, values);
+    },
+
+    update: function(key, values) {
+        return $.ajax({
+            url: SERVICE_URL + encodeURIComponent(key.id),
+            method: 'POST',
+            data: values,
+        });
+    },
+
+    remove: function(key) {
+        return $.ajax({
+            url: SERVICE_URL + encodeURIComponent(key.id),
+            method: 'DELETE',
+        });
+    },
+*/
+});
+
+
+var dataGrid;
+var toolbar;
+$(function(){
+  dataGrid = $("#yarnInventory").dxDataGrid({
+    dataSource: yarn_pos,
+    allowColumnReordering: true,
+    allowColumnResizing: true,
+    columnAutoWidth: true,
+    columnChooser: {
+      enabled: true,
+      mode: "select"
+    },
+    columnFixing: { 
+      enabled: true
+    },
+    paging: { enabled: false },
+    height: $(window).height() - 120,
+    "export": {
+      enabled: true,
+      fileName: 'YarnPO',
+    },
+    filterRow: { visible: true },
+    filterPanel: { visible: true },
+    headerFilter: { visible: true },
+    grouping: {
+      autoExpandAll: true,
+    },
+    groupPanel: {
+      visible: true,
+    },
+    columns: [
+      {
+        caption:   'Actions',
+        calculateCellValue: function(rowData) {
+          return rowData.serial_number;
+        },
+        cellTemplate: function (container, options) {
+          $("<div>")
+          .append($("<a>", { "href": '/yarn/po/edit/' + options.value }).text('edit'))
+          .append(" ")
+          .append($("<a>", { "href": '/yarn/po/view/' + options.value }).text('view'))
+          .appendTo(container);
+        },
+        fixed: true,
+        allowEditing: false,
+        minWidth:  90,
+      }, {
+        dataField: 'serial_number',
+        caption:   'PO#',
+        fixed: true,
+        minWidth:  150,
+        encodeHtml: true,
+        cellTemplate: function (container, options) {
+          container.append("<a href='/yarn/po/view/" + options.data.serial_number + "'>" + options.data.serial_number + "</a>");
+        },
+      }, {
+        dataField: 'created_date',
+        dataType:  'date',
+        caption:   'Ordered',
+        minWidth:  100,
+      }, {
+        caption:   'Status',
+        minWidth:  90,
+        calculateCellValue: function(rowData) {
+          var markup = rowData.status;
+          if (rowData.qty_received > 0) {
+            markup += ', Partially Received';
+          }
+          return markup;
+        },
+      },{
+        dataField: 'requested_date',
+        dataType:  'date',
+        caption:   'Requested',
+        minWidth:  120,
+      }, {
+        dataField: 'quoted_date',
+        dataType:  'date',
+        caption:   'Quoted',
+        minWidth:  100,
+      }, {
+        dataField: 'qty_ordered',
+        dataType: 'number',
+        caption:   'Qty',
+        format: {
+          type:      'fixedPoint',
+          precision: 0
+        },
+        minWidth:  60,
+      }, {
+        dataType: 'number',
+        caption:   'Balance',
+        format: {
+          type:      'fixedPoint',
+          precision: 0
+        },
+        calculateDisplayValue: function(rowData) {
+          return rowData.qty_ordered - rowData.qty_received;
+        },
+        minWidth:  90,
+      }, {
+        dataField: 'yarn.desc_number',
+        caption:   'Desc#',
+        minWidth:  80,
+        cellTemplate: function (container, options) {
+          $('<button onClick="yarnInfo('+options.row.data.yarn.desc_number+');" style="text-decoration: underline;">').text(options.value)
+          .appendTo(container);
+        },
+      }, {
+        dataField: 'purchased_from.name',
+        caption:   'Supplier',
+        minWidth:  90,
+      }, {
+        caption:   'Size',
+        visible: false,
+        allowEditing: false,
+        calculateCellValue: function(rowData) {
+          return `${rowData.yarn.size}/${rowData.yarn.ply}/${rowData.yarn.filament}`;
+        },
+        minWidth:  70,
+      }, {
+        dataField: 'yarn.yarn_type.name',
+        caption:   'Type',
+        minWidth:  70,
+        visible: false,
+      }, {
+        dataField: 'yarn.color_name',
+        visible: false,
+        caption:   'Color',
+        minWidth:  70,
+      }, {
+        dataField: 'yarn.description',
+        caption: 'Description',
+      }, {
+        dataField: 'unit_price',
+        caption:   '$/lb',
+        format: {
+          type:      'currency',
+          precision: 2
+        },
+        minWidth:  60,
+      }, {
+        dataField: 'totalPrice',
+        caption:   'Total $',
+        format: {
+          type:      'currency',
+          precision: 2
+        },
+        calculateCellValue: function(rowData) {
+          return rowData.unit_price * rowData.qty_ordered;
+        },
+        minWidth:  90,
+      }
+    ],
+    onToolbarPreparing: function(e) {
+      toolbar=e.toolbarOptions.items;
+      toolbar.push({
+        widget: "dxButton",
+        options: {
+          icon: "fa fa-plus",
+          text: "Create Yarn Demand",
+          onClick: function () {
+            location.href="/yarn/po/create";
+          },
+        }
+      }, {
+        widget: "dxButton",
+        options: {
+          icon: "fa fa-list",
+          text: "Show Closed POs",
+          elementAttr: {id: "loadClosedPOs"},
+          onClick: function () {
+            loadClosedPOs();
+            $('#loadClosedPOs').hide();
+            $('#loadAllPOs').show();
+          },
+        }
+      }, {
+        widget: "dxButton",
+        options: {
+          icon: "fa fa-list",
+          text: "Show Open POs",
+          elementAttr: {id: "loadAllPOs"},
+          onClick: function () {
+            dataGrid.option("dataSource",yarn_pos);
+            $('#loadClosedPOs').show();
+            $('#loadAllPOs').hide();
+          },
+        }
+      }
+      );
+    },
+    onContentReady: function(e) {
+      
+        // Not Yet
+        // var dataGrid = e.component;
+        // dataGrid.filter(['job', '=', '']);
+      
+      
+    },
+    onExporting: function(e) {
+      e.component.beginUpdate();
+      e.component.columnOption("action","visible",false);
+    },
+    onExported: function(e) {
+      e.component.columnOption("action","visible",true);
+      e.component.endUpdate();
+    }
+  }).dxDataGrid("instance");
+
+  $('#loadAllPOs').hide();
+});
+</script>
+</div>
+    </div>
+    
+  </div>
+
+  <script>$(document).foundation();</script>
+</body>
+</html>
+
+
+
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        
+        
+    
+    
+        var fullURL = window.location;
+        var baseURL = fullURL.protocol + "//" + fullURL.host;
+        var timer = setInterval(
+            function() {
+            
+            },
+            60000
+        );
+
+        function finishJob( job_id, job_type ) {
+            clearInterval(timer);
+
+            var actionURL;
+            switch( job_type ) {
+                
+                case 'yarn_reconcile_import':
+                    actionURL = '/admin/reconcile_results/' + job_id;
+                    break;
+                
+                default:
+                    return;
+            }
+
+            var finishURL = baseURL + actionURL;
+            $.ajax({
+                url: finishURL,
+                type: 'GET',
+                success: function( data ) {
+                    if( data.error === 1 ) {
+                        $.growl({ message: data.message, style: "error", title: "Error!", fixed: true });
+                    } else {
+                        $.growl({ message: data.message, style: "notice", title: "Success!", fixed: true });
+                    }
+                    console.log( "Finished job " + job_id + "." );
+                },
+                error: function(event, stat, error) {
+                    var str = 'JSON request failed. Status: ' + stat + ' Error: ' + error;
+                    console.log(str);
+                },
+            });
+        }
+    
+
+    });
+</script>

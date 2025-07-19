@@ -7,13 +7,19 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8501:8501"
+    env_file:
+      - .env
     environment:
       - ENVIRONMENT=production
       - DEBUG=false
       - DB_HOST=postgres
-      - DB_NAME=beverly_knits
-      - DB_USER=postgres
-      - DB_PASSWORD=secure_password
+      - DB_NAME=${POSTGRES_DB:-beverly_knits}
+      - DB_USER=${POSTGRES_USER:-postgres}
+      - DB_PASSWORD=${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      - SECRET_KEY=${SECRET_KEY:?SECRET_KEY is required}
+      - ERP_BASE_URL=${ERP_BASE_URL:-https://efab.bkiapps.com}
+      - ERP_USERNAME=${ERP_USERNAME:?ERP_USERNAME is required}
+      - ERP_PASSWORD=${ERP_PASSWORD:?ERP_PASSWORD is required}
     volumes:
       - ./data:/app/data
       - ./config:/app/config
@@ -24,10 +30,12 @@ services:
 
   postgres:
     image: postgres:15
+    env_file:
+      - .env
     environment:
-      - POSTGRES_DB=beverly_knits
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=secure_password
+      - POSTGRES_DB=${POSTGRES_DB:-beverly_knits}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
     ports:
       - "5432:5432"
     volumes:
