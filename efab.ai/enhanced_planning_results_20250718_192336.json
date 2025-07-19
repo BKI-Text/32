@@ -1,0 +1,104 @@
+{
+  "planning_timestamp": "2025-07-18T19:23:36.181268",
+  "erp_data_quality": 0.8560000000000001,
+  "total_recommendations": 3,
+  "recommendations": [
+    {
+      "material_id": "1_150_nat_poly",
+      "material_name": "1/150 nat poly",
+      "current_stock": 1500,
+      "predicted_demand": 800,
+      "recommended_order_quantity": 0,
+      "recommended_supplier": "Acme Yarns",
+      "estimated_cost": 0.0,
+      "urgency_score": 0.2,
+      "ml_confidence": 0.8,
+      "seasonal_factor": 1.1,
+      "supplier_reliability": 0.95,
+      "lead_time_days": 14,
+      "safety_stock_level": 160.0,
+      "stockout_risk": 0,
+      "business_rationale": "1/150 nat poly: Adequate stock levels, high-reliability supplier available, low urgency, ML prediction confidence: 95.0%",
+      "erp_data_sources": [
+        "/yarn",
+        "/report/yarn_demand",
+        "/yarn/po/list"
+      ]
+    },
+    {
+      "material_id": "1_300_nat_poly",
+      "material_name": "1/300 nat poly",
+      "current_stock": 2300,
+      "predicted_demand": 1200,
+      "recommended_order_quantity": 0,
+      "recommended_supplier": "Acme Yarns",
+      "estimated_cost": 0.0,
+      "urgency_score": 0.2,
+      "ml_confidence": 0.8,
+      "seasonal_factor": 1.1,
+      "supplier_reliability": 0.95,
+      "lead_time_days": 14,
+      "safety_stock_level": 240.0,
+      "stockout_risk": 0,
+      "business_rationale": "1/300 nat poly: Adequate stock levels, high-reliability supplier available, low urgency, ML prediction confidence: 95.0%",
+      "erp_data_sources": [
+        "/yarn",
+        "/report/yarn_demand",
+        "/yarn/po/list"
+      ]
+    },
+    {
+      "material_id": "2_300_nat_poly",
+      "material_name": "2/300 nat poly",
+      "current_stock": 1200,
+      "predicted_demand": 600,
+      "recommended_order_quantity": 0,
+      "recommended_supplier": "Acme Yarns",
+      "estimated_cost": 0.0,
+      "urgency_score": 0.2,
+      "ml_confidence": 0.8,
+      "seasonal_factor": 1.1,
+      "supplier_reliability": 0.95,
+      "lead_time_days": 14,
+      "safety_stock_level": 120.0,
+      "stockout_risk": 0,
+      "business_rationale": "2/300 nat poly: Adequate stock levels, high-reliability supplier available, low urgency, ML prediction confidence: 95.0%",
+      "erp_data_sources": [
+        "/yarn",
+        "/report/yarn_demand",
+        "/yarn/po/list"
+      ]
+    }
+  ],
+  "erp_snapshot_summary": {
+    "critical_yarns_analyzed": 3,
+    "suppliers_evaluated": 3,
+    "total_inventory_value": 125000.0,
+    "data_sources": [
+      "yarn_inventory",
+      "demand_forecast",
+      "supplier_performance",
+      "purchase_orders",
+      "expected_yarn"
+    ]
+  },
+  "ml_models_used": [
+    "anomaly_detection_model",
+    "demand_forecasting_model",
+    "ensemble_model",
+    "linear_regression_demand_forecasting",
+    "performance_regressor_supplier_performance",
+    "price_prediction_model",
+    "random_forest_demand_forecasting",
+    "random_forest_optimizer_inventory_optimization",
+    "supplier_classifier_supplier_performance",
+    "xgboost_optimizer_inventory_optimization",
+    "xgboost_regressor_demand_forecasting"
+  ],
+  "business_impact": {
+    "high_urgency_items": 0,
+    "total_recommended_spend": 0.0,
+    "stockout_risk_items": 0,
+    "automated_recommendations": 3
+  }
+}

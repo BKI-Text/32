@@ -1,0 +1,207 @@
+{
+  "timestamp": "2025-07-18T18:16:12.955850",
+  "connection_test": {
+    "connection_status": "connected",
+    "authenticated": true,
+    "base_url": "https://efab.bkiapps.com",
+    "username": "psytz",
+    "test_timestamp": "2025-07-18T18:16:08.994657",
+    "endpoints_tested": {
+      "materials": {
+        "/yarn": {
+          "status_code": 200,
+          "accessible": true,
+          "response_size": 34851
+        },
+        "/inventory/materials": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        },
+        "/api/materials": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        }
+      },
+      "suppliers": {
+        "/suppliers": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        },
+        "/vendors": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        },
+        "/api/suppliers": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        }
+      },
+      "inventory": {
+        "/yarn": {
+          "status_code": 200,
+          "accessible": true,
+          "response_size": 34851
+        },
+        "/inventory": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        },
+        "/stock": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        }
+      },
+      "orders": {
+        "/fabric/so/list": {
+          "status_code": 200,
+          "accessible": true,
+          "response_size": 37724
+        },
+        "/orders": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        },
+        "/sales": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        }
+      },
+      "bom": {
+        "/bill-of-materials": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        },
+        "/bom": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        },
+        "/api/bom": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        }
+      },
+      "forecasts": {
+        "/report/yarn_demand": {
+          "status_code": 200,
+          "accessible": true,
+          "response_size": 29119
+        },
+        "/report/expected_yarn": {
+          "status_code": 200,
+          "accessible": true,
+          "response_size": 30906
+        },
+        "/forecasts": {
+          "status_code": 404,
+          "accessible": false,
+          "response_size": 1272
+        }
+      },
+      "yarn_data": {
+        "/yarn": {
+          "status_code": 200,
+          "accessible": true,
+          "response_size": 34851
+        }
+      },
+      "yarn_reports": {
+        "/report/expected_yarn": {
+          "status_code": 200,
+          "accessible": true,
+          "response_size": 30906
+        },
+        "/report/yarn_demand": {
+          "status_code": 200,
+          "accessible": true,
+          "response_size": 29119
+        }
+      },
+      "fabric_orders": {
+        "/fabric/so/list": {
+          "status_code": 200,
+          "accessible": true,
+          "response_size": 37724
+        }
+      }
+    },
+    "success": true
+  },
+  "sync_results": {
+    "timestamp": "2025-07-18T18:16:10.659731",
+    "success": false,
+    "materials": {
+      "success": false,
+      "error": "No valid materials endpoint found"
+    },
+    "suppliers": {
+      "success": false,
+      "error": "No valid suppliers endpoint found"
+    },
+    "inventory": {
+      "success": false,
+      "error": "No valid inventory endpoint found"
+    },
+    "orders": {
+      "success": false,
+      "error": "No valid orders endpoint found"
+    },
+    "bom": {
+      "success": false,
+      "error": "No valid BOM endpoint found"
+    },
+    "forecasts": {
+      "success": false,
+      "error": "No valid forecasts endpoint found"
+    },
+    "summary": {
+      "total_entities": 9,
+      "successful_syncs": 0,
+      "success_rate": 0.0,
+      "materials_count": 0,
+      "suppliers_count": 0,
+      "inventory_count": 0,
+      "orders_count": 0,
+      "yarn_data_count": 0,
+      "yarn_reports_count": 0,
+      "fabric_orders_count": 0
+    },
+    "yarn_data": {
+      "success": false,
+      "error": "Yarn endpoint not accessible"
+    },
+    "yarn_reports": {
+      "success": false,
+      "error": "No yarn reports accessible"
+    },
+    "fabric_orders": {
+      "success": false,
+      "error": "Fabric orders endpoint not accessible"
+    }
+  },
+  "domain_objects_count": {
+    "materials": 0,
+    "suppliers": 0,
+    "forecasts": 0,
+    "boms": 0
+  },
+  "status": {
+    "connection_status": "connected",
+    "authenticated": true,
+    "last_sync": null,
+    "sync_status": {},
+    "erp_name": "Efab ERP",
+    "base_url": "https://efab.bkiapps.com"
+  }
+}

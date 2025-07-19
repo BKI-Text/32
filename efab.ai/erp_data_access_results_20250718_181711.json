@@ -1,0 +1,42 @@
+{
+  "yarn": {
+    "status": "success",
+    "status_code": 200,
+    "content_length": 34851,
+    "content_type": "text/html; charset=UTF-8",
+    "url": "https://efab.bkiapps.com/yarn",
+    "tables_found": 2,
+    "data_grid": true,
+    "sample_file": "sample_yarn_data.html"
+  },
+  "yarn_demand": {
+    "status": "success",
+    "status_code": 200,
+    "content_length": 29119,
+    "content_type": "text/html; charset=UTF-8",
+    "url": "https://efab.bkiapps.com/report/yarn_demand",
+    "tables_found": 0,
+    "data_grid": true,
+    "sample_file": "sample_yarn_demand_data.html"
+  },
+  "expected_yarn": {
+    "status": "success",
+    "status_code": 200,
+    "content_length": 30906,
+    "content_type": "text/html; charset=UTF-8",
+    "url": "https://efab.bkiapps.com/report/expected_yarn",
+    "tables_found": 0,
+    "data_grid": true,
+    "sample_file": "sample_expected_yarn_data.html"
+  },
+  "fabric_orders": {
+    "status": "success",
+    "status_code": 200,
+    "content_length": 37724,
+    "content_type": "text/html; charset=UTF-8",
+    "url": "https://efab.bkiapps.com/fabric/so/list",
+    "tables_found": 0,
+    "data_grid": true,
+    "sample_file": "sample_fabric_orders_data.html"
+  }
+}

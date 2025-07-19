@@ -1,0 +1,318 @@
+{
+  "success": true,
+  "pipeline_duration": 3.517619,
+  "datasets_extracted": 3,
+  "models_trained": 7,
+  "datasets": {
+    "demand_forecasting": {
+      "name": "demand_forecasting",
+      "description": "Historical yarn demand data for forecasting",
+      "data": "          yarn_type  month  ...  supplier_count  is_critical\n0      Cotton blend     11  ...               2        False\n1    2/300 nat poly      7  ...               2         True\n2       Viscose mix      2  ...               2        False\n3      Cotton blend      5  ...               1        False\n4      Cotton blend      9  ...               2        False\n..              ...    ...  ...             ...          ...\n495  2/300 nat poly      2  ...               4         True\n496  1/150 nat poly      7  ...               4         True\n497      Nylon base      6  ...               3        False\n498  1/150 nat poly      7  ...               2         True\n499    Cotton blend     12  ...               3        False\n\n[500 rows x 7 columns]",
+      "target_column": "demand_quantity",
+      "feature_columns": [
+        "yarn_type",
+        "month",
+        "historical_avg",
+        "seasonal_factor",
+        "supplier_count"
+      ],
+      "metadata": {
+        "source_endpoint": "/report/yarn_demand",
+        "data_types": {
+          "demand_quantity": "numeric",
+          "yarn_type": "categorical",
+          "month": "temporal",
+          "historical_avg": "numeric",
+          "seasonal_factor": "numeric",
+          "supplier_count": "numeric"
+        },
+        "business_rules": {
+          "critical_yarns": [
+            "1/150 nat poly",
+            "1/300 nat poly",
+            "2/300 nat poly"
+          ],
+          "seasonality": {
+            "Q1": 0.9,
+            "Q2": 1.1,
+            "Q3": 1.0,
+            "Q4": 1.2
+          }
+        }
+      },
+      "quality_score": 0.85,
+      "record_count": 500,
+      "extraction_timestamp": "2025-07-18T19:20:39.093098"
+    },
+    "inventory_optimization": {
+      "name": "inventory_optimization",
+      "description": "Inventory levels and optimization patterns",
+      "data": "     current_stock  lead_time  ...  optimal_stock_level  stockout_risk\n0             1910          7  ...                 2613       0.571450\n1              707         34  ...                 1026       0.246257\n2             1969         18  ...                 2402       0.318513\n3              277         11  ...                  403       0.393583\n4              737         39  ...                 1319       0.445850\n..             ...        ...  ...                  ...            ...\n295           1277         12  ...                 1892       0.633102\n296            829         40  ...                 1478       0.757087\n297           1035         26  ...                 1497       0.408760\n298            821         36  ...                 1375       0.496931\n299           1492         31  ...                 1891       0.288198\n\n[300 rows x 7 columns]",
+      "target_column": "optimal_stock_level",
+      "feature_columns": [
+        "current_stock",
+        "lead_time",
+        "demand_variance",
+        "cost_per_unit",
+        "supplier_reliability"
+      ],
+      "metadata": {
+        "source_endpoints": [
+          "/yarn",
+          "/report/expected_yarn",
+          "/yarn/po/list"
+        ],
+        "optimization_objective": "minimize_cost_while_avoiding_stockouts",
+        "constraints": {
+          "max_stock_level": 10000,
+          "min_safety_stock": 0.15,
+          "max_lead_time_days": 60
+        }
+      },
+      "quality_score": 0.9,
+      "record_count": 300,
+      "extraction_timestamp": "2025-07-18T19:20:39.341381"
+    },
+    "supplier_performance": {
+      "name": "supplier_performance",
+      "description": "Supplier reliability and performance metrics",
+      "data": "             supplier  delivery_time  ...  payment_terms  reliability_score\n0       Reliable Corp             40  ...             30           0.520646\n1    Budget Materials             47  ...             90           0.470452\n2       Reliable Corp              6  ...             90           0.937983\n3       Reliable Corp             46  ...             90           0.476815\n4    Premium Supplies             21  ...             90           0.848924\n..                ...            ...  ...            ...                ...\n195        Acme Yarns              8  ...             90           1.000000\n196  Budget Materials             21  ...             90           0.799721\n197     Reliable Corp             22  ...             60           0.825982\n198        Acme Yarns             41  ...             90           0.575746\n199  Budget Materials             46  ...             60           0.510634\n\n[200 rows x 7 columns]",
+      "target_column": "reliability_score",
+      "feature_columns": [
+        "delivery_time",
+        "quality_rating",
+        "cost_variance",
+        "order_frequency",
+        "payment_terms"
+      ],
+      "metadata": {
+        "source_endpoints": [
+          "/yarn/po/list",
+          "/report/expected_yarn"
+        ],
+        "performance_metrics": [
+          "on_time_delivery",
+          "quality_score",
+          "cost_competitiveness"
+        ],
+        "risk_factors": [
+          "single_source_dependency",
+          "geographic_risk",
+          "financial_stability"
+        ]
+      },
+      "quality_score": 0.8,
+      "record_count": 200,
+      "extraction_timestamp": "2025-07-18T19:20:39.554671"
+    }
+  },
+  "model_results": [
+    {
+      "model_name": "XGBoost Regressor",
+      "model_type": "XGBoost Regressor",
+      "dataset_name": "demand_forecasting",
+      "accuracy_score": 0.9748643040657043,
+      "training_time": 0.651213,
+      "feature_importance": {
+        "month": "0.002488094",
+        "historical_avg": "0.46458662",
+        "seasonal_factor": "0.51317865",
+        "supplier_count": "0.002421506",
+        "yarn_1/150 nat poly": "0.0022382094",
+        "yarn_1/300 nat poly": "0.0019617942",
+        "yarn_2/300 nat poly": "0.0027217134",
+        "yarn_Cotton blend": "0.0023723934",
+        "yarn_Nylon base": "0.003618236",
+        "yarn_Viscose mix": "0.004412787"
+      },
+      "model_path": "models/trained/xgboost_regressor_demand_forecasting.pkl",
+      "validation_metrics": {
+        "r2_score": 0.9748643040657043,
+        "rmse": 63.997064523133595
+      },
+      "business_impact": "HIGH"
+    },
+    {
+      "model_name": "Random Forest",
+      "model_type": "Random Forest",
+      "dataset_name": "demand_forecasting",
+      "accuracy_score": 0.9773678671669278,
+      "training_time": 0.114418,
+      "feature_importance": {
+        "month": 0.0021382357447914924,
+        "historical_avg": 0.8074861606706198,
+        "seasonal_factor": 0.18570254481512224,
+        "supplier_count": 0.0015383218607202811,
+        "yarn_1/150 nat poly": 0.0006843451425078273,
+        "yarn_1/300 nat poly": 0.0003732443690854683,
+        "yarn_2/300 nat poly": 0.0004261191387287549,
+        "yarn_Cotton blend": 0.0004633595550867977,
+        "yarn_Nylon base": 0.0003478899160227598,
+        "yarn_Viscose mix": 0.0008397787873146688
+      },
+      "model_path": "models/trained/random_forest_demand_forecasting.pkl",
+      "validation_metrics": {
+        "r2_score": 0.9773678671669278,
+        "rmse": 60.72639783742788
+      },
+      "business_impact": "HIGH"
+    },
+    {
+      "model_name": "Linear Regression",
+      "model_type": "Linear Regression",
+      "dataset_name": "demand_forecasting",
+      "accuracy_score": 0.9615673625708612,
+      "training_time": 0.007418,
+      "feature_importance": {
+        "month": 1.134064820773047,
+        "historical_avg": 1.002726020602005,
+        "seasonal_factor": 1279.0793701875182,
+        "supplier_count": 2.581702961848384,
+        "yarn_1/150 nat poly": 3.7889656504550064,
+        "yarn_1/300 nat poly": 1.038759280781019,
+        "yarn_2/300 nat poly": 9.138054187779042,
+        "yarn_Cotton blend": 10.921266158137634,
+        "yarn_Nylon base": 10.532077100369534,
+        "yarn_Viscose mix": 3.9211401987736814
+      },
+      "model_path": "models/trained/linear_regression_demand_forecasting.pkl",
+      "validation_metrics": {
+        "r2_score": 0.9615673625708612,
+        "rmse": 79.13431969418858
+      },
+      "business_impact": "MEDIUM"
+    },
+    {
+      "model_name": "XGBoost Optimizer",
+      "model_type": "XGBoost Regressor",
+      "dataset_name": "inventory_optimization",
+      "accuracy_score": 0.9920514822006226,
+      "training_time": 0.151592,
+      "feature_importance": {
+        "current_stock": "0.9746473",
+        "lead_time": "0.0039960225",
+        "demand_variance": "0.019188255",
+        "cost_per_unit": "0.0016812778",
+        "supplier_reliability": "0.00048712498"
+      },
+      "model_path": "models/trained/xgboost_optimizer_inventory_optimization.pkl",
+      "validation_metrics": {
+        "r2_score": 0.9920514822006226,
+        "rmse": 65.72708949108237
+      },
+      "business_impact": "HIGH"
+    },
+    {
+      "model_name": "Random Forest Optimizer",
+      "model_type": "Random Forest",
+      "dataset_name": "inventory_optimization",
+      "accuracy_score": 0.9882808002060034,
+      "training_time": 0.09724,
+      "feature_importance": {
+        "current_stock": 0.970563417811651,
+        "lead_time": 0.0040008457266737215,
+        "demand_variance": 0.02151022408270925,
+        "cost_per_unit": 0.0023819028838171236,
+        "supplier_reliability": 0.001543609495148886
+      },
+      "model_path": "models/trained/random_forest_optimizer_inventory_optimization.pkl",
+      "validation_metrics": {
+        "r2_score": 0.9882808002060034,
+        "rmse": 79.80874794691961
+      },
+      "business_impact": "HIGH"
+    },
+    {
+      "model_name": "Supplier Classifier",
+      "model_type": "Random Forest Classifier",
+      "dataset_name": "supplier_performance",
+      "accuracy_score": 0.925,
+      "training_time": 0.081349,
+      "feature_importance": {
+        "delivery_time": 0.5985232739980004,
+        "quality_rating": 0.16762130885756604,
+        "cost_variance": 0.09116369449890085,
+        "order_frequency": 0.062355556838919066,
+        "payment_terms": 0.027026077774646336,
+        "supplier_Acme Yarns": 0.012082540262194106,
+        "supplier_Budget Materials": 0.009970423229549337,
+        "supplier_Global Textiles": 0.009010001779267895,
+        "supplier_Premium Supplies": 0.010135400120764993,
+        "supplier_Reliable Corp": 0.012111722640191214
+      },
+      "model_path": "models/trained/supplier_classifier_supplier_performance.pkl",
+      "validation_metrics": {
+        "accuracy": 0.925
+      },
+      "business_impact": "MEDIUM"
+    },
+    {
+      "model_name": "Performance Regressor",
+      "model_type": "Random Forest",
+      "dataset_name": "supplier_performance",
+      "accuracy_score": 0.9873481460337697,
+      "training_time": 0.088319,
+      "feature_importance": {
+        "delivery_time": 0.9273575131624877,
+        "quality_rating": 0.061269198906486355,
+        "cost_variance": 0.0057987499682337525,
+        "order_frequency": 0.002459529250129758,
+        "payment_terms": 0.0010951164261383296,
+        "supplier_Acme Yarns": 0.0003229223520479561,
+        "supplier_Budget Materials": 0.00036993812862388373,
+        "supplier_Global Textiles": 0.00037155373292966645,
+        "supplier_Premium Supplies": 0.0004875715694259976,
+        "supplier_Reliable Corp": 0.0004679065034966387
+      },
+      "model_path": "models/trained/performance_regressor_supplier_performance.pkl",
+      "validation_metrics": {
+        "r2_score": 0.9873481460337697,
+        "rmse": 0.016972586936656223
+      },
+      "business_impact": "HIGH"
+    }
+  ],
+  "performance_summary": {
+    "total_models": 7,
+    "average_accuracy": 0.9723542803205555,
+    "best_accuracy": 0.9920514822006226,
+    "worst_accuracy": 0.925,
+    "average_training_time": 0.1702212857142857,
+    "total_training_time": 1.191549,
+    "models_by_type": {
+      "Random Forest": 3,
+      "XGBoost Regressor": 2,
+      "Random Forest Classifier": 1,
+      "Linear Regression": 1
+    }
+  },
+  "business_impact": {
+    "data_coverage": {
+      "total_records_processed": 1000,
+      "datasets_integrated": 3,
+      "erp_endpoints_utilized": 5
+    },
+    "model_capabilities": {
+      "demand_forecasting": true,
+      "inventory_optimization": true,
+      "supplier_performance": true
+    },
+    "expected_benefits": [
+      "20-30% improvement in demand forecast accuracy",
+      "15-25% reduction in inventory carrying costs",
+      "10-20% improvement in supplier reliability",
+      "Automated daily procurement recommendations",
+      "Real-time inventory optimization"
+    ],
+    "readiness_for_production": true
+  },
+  "next_steps": [
+    "Deploy trained models to production environment",
+    "Set up automated model retraining pipeline",
+    "Integrate models with Beverly Knits planning engine",
+    "Create real-time prediction endpoints",
+    "Implement model performance monitoring",
+    "Begin A/B testing of different models",
+    "Scale up data extraction for improved training"
+  ]
+}
