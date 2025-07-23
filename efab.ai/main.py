@@ -891,8 +891,9 @@ class BeverlyKnitsApp:
                         try:
                             df = pd.read_csv(file, encoding='utf-8-sig')
                             total_rows += len(df)
-                        except:
-                            pass
+                        except Exception as e:
+                            st.error(f"Error reading {file.name}: {str(e)}")
+                            logger.error(f"Failed to read CSV file {file}: {e}")
                     st.metric("Total Data Rows", total_rows)
                     
             else:

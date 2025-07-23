@@ -1,0 +1,263 @@
+{
+  "configs": {
+    "ARIMA_001": {
+      "model_id": "ARIMA_001",
+      "model_type": "ARIMA",
+      "performance_threshold": 0.7,
+      "data_drift_threshold": 0.3,
+      "max_age_days": 1,
+      "min_data_points": 100,
+      "retraining_interval_hours": 1,
+      "enabled": true
+    },
+    "PROPHET_001": {
+      "model_id": "PROPHET_001",
+      "model_type": "Prophet",
+      "performance_threshold": 0.75,
+      "data_drift_threshold": 0.2,
+      "max_age_days": 2,
+      "min_data_points": 100,
+      "retraining_interval_hours": 24,
+      "enabled": true
+    },
+    "LSTM_001": {
+      "model_id": "LSTM_001",
+      "model_type": "LSTM",
+      "performance_threshold": 0.8,
+      "data_drift_threshold": 0.15,
+      "max_age_days": 3,
+      "min_data_points": 100,
+      "retraining_interval_hours": 24,
+      "enabled": true
+    }
+  },
+  "jobs": {
+    "ARIMA_001_1752827201": {
+      "job_id": "ARIMA_001_1752827201",
+      "model_id": "ARIMA_001",
+      "model_type": "ARIMA",
+      "trigger": "manual",
+      "scheduled_time": "2025-07-18T04:26:41.285396",
+      "started_time": null,
+      "completed_time": null,
+      "status": "pending",
+      "error_message": null,
+      "old_metrics": null,
+      "new_metrics": null
+    },
+    "PROPHET_001_1752827201": {
+      "job_id": "PROPHET_001_1752827201",
+      "model_id": "PROPHET_001",
+      "model_type": "Prophet",
+      "trigger": "performance_degradation",
+      "scheduled_time": "2025-07-18T04:26:41.285509",
+      "started_time": null,
+      "completed_time": null,
+      "status": "pending",
+      "error_message": null,
+      "old_metrics": null,
+      "new_metrics": null
+    },
+    "LSTM_001_1752827201": {
+      "job_id": "LSTM_001_1752827201",
+      "model_id": "LSTM_001",
+      "model_type": "LSTM",
+      "trigger": "data_drift",
+      "scheduled_time": "2025-07-18T04:26:41.285589",
+      "started_time": null,
+      "completed_time": null,
+      "status": "pending",
+      "error_message": null,
+      "old_metrics": null,
+      "new_metrics": null
+    }
+  },
+  "metrics_history": {
+    "ARIMA_001": [
+      {
+        "model_id": "ARIMA_001",
+        "model_type": "ARIMA",
+        "accuracy": 0.83,
+        "mae": 0.11142490255865393,
+        "mse": 0.0193149894981965,
+        "rmse": 0.1389783778081918,
+        "r2_score": 0.9750214331799768,
+        "last_updated": "2025-07-18T04:26:26.242181",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "ARIMA_001",
+        "model_type": "ARIMA",
+        "accuracy": 0.8099999999999999,
+        "mae": 0.1279806466496571,
+        "mse": 0.02608382620844036,
+        "rmse": 0.1615048798285685,
+        "r2_score": 0.9662678255180912,
+        "last_updated": "2025-07-18T04:26:28.246471",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "ARIMA_001",
+        "model_type": "ARIMA",
+        "accuracy": 0.7899999999999999,
+        "mae": 0.11507843099991294,
+        "mse": 0.02113627183680282,
+        "rmse": 0.1453831896637394,
+        "r2_score": 0.9726661110299308,
+        "last_updated": "2025-07-18T04:26:30.250584",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "ARIMA_001",
+        "model_type": "ARIMA",
+        "accuracy": 0.7699999999999999,
+        "mae": 0.1224403309264359,
+        "mse": 0.0234819453633382,
+        "rmse": 0.15323819812089348,
+        "r2_score": 0.9696326347277049,
+        "last_updated": "2025-07-18T04:26:32.257054",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "ARIMA_001",
+        "model_type": "ARIMA",
+        "accuracy": 0.7499999999999999,
+        "mae": 0.11926884865239601,
+        "mse": 0.02176042234939422,
+        "rmse": 0.14751414287923115,
+        "r2_score": 0.9718589459374533,
+        "last_updated": "2025-07-18T04:26:34.268417",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      }
+    ],
+    "PROPHET_001": [
+      {
+        "model_id": "PROPHET_001",
+        "model_type": "Prophet",
+        "accuracy": 0.83,
+        "mae": 0.1091026707791595,
+        "mse": 0.019806782388890633,
+        "rmse": 0.1407365709007102,
+        "r2_score": 0.9743854358586754,
+        "last_updated": "2025-07-18T04:26:26.243175",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "PROPHET_001",
+        "model_type": "Prophet",
+        "accuracy": 0.8099999999999999,
+        "mae": 0.13434904668460992,
+        "mse": 0.027471424947787773,
+        "rmse": 0.1657450601007094,
+        "r2_score": 0.9644733524828661,
+        "last_updated": "2025-07-18T04:26:28.247323",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "PROPHET_001",
+        "model_type": "Prophet",
+        "accuracy": 0.7899999999999999,
+        "mae": 0.11688990333813147,
+        "mse": 0.021786144929000738,
+        "rmse": 0.1476013039542698,
+        "r2_score": 0.9718256809349771,
+        "last_updated": "2025-07-18T04:26:30.251605",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "PROPHET_001",
+        "model_type": "Prophet",
+        "accuracy": 0.7699999999999999,
+        "mae": 0.12150526263737918,
+        "mse": 0.022677559797485904,
+        "rmse": 0.15059070289193122,
+        "r2_score": 0.9706728837326334,
+        "last_updated": "2025-07-18T04:26:32.258569",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "PROPHET_001",
+        "model_type": "Prophet",
+        "accuracy": 0.7499999999999999,
+        "mae": 0.1125917233610329,
+        "mse": 0.0198947662014627,
+        "rmse": 0.141048807869697,
+        "r2_score": 0.9742716532681327,
+        "last_updated": "2025-07-18T04:26:34.272909",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      }
+    ],
+    "LSTM_001": [
+      {
+        "model_id": "LSTM_001",
+        "model_type": "LSTM",
+        "accuracy": 0.83,
+        "mae": 0.11636279806034715,
+        "mse": 0.021598611207935693,
+        "rmse": 0.1469646597244919,
+        "r2_score": 0.9720682036442474,
+        "last_updated": "2025-07-18T04:26:26.244055",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "LSTM_001",
+        "model_type": "LSTM",
+        "accuracy": 0.8099999999999999,
+        "mae": 0.11275051769804505,
+        "mse": 0.02123636614485356,
+        "rmse": 0.14572702613054847,
+        "r2_score": 0.9725366668817897,
+        "last_updated": "2025-07-18T04:26:28.248092",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "LSTM_001",
+        "model_type": "LSTM",
+        "accuracy": 0.7899999999999999,
+        "mae": 0.12026008266029932,
+        "mse": 0.0216072565382195,
+        "rmse": 0.1469940697382704,
+        "r2_score": 0.9720570233140591,
+        "last_updated": "2025-07-18T04:26:30.252732",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "LSTM_001",
+        "model_type": "LSTM",
+        "accuracy": 0.7699999999999999,
+        "mae": 0.11147529318050306,
+        "mse": 0.01953591437530293,
+        "rmse": 0.13977093537392862,
+        "r2_score": 0.97473572829748,
+        "last_updated": "2025-07-18T04:26:32.260285",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      },
+      {
+        "model_id": "LSTM_001",
+        "model_type": "LSTM",
+        "accuracy": 0.7499999999999999,
+        "mae": 0.11718723042871632,
+        "mse": 0.020524529007468918,
+        "rmse": 0.14326384403424655,
+        "r2_score": 0.9734572302350754,
+        "last_updated": "2025-07-18T04:26:34.278648",
+        "data_points": 100,
+        "confidence_interval": 0.95
+      }
+    ]
+  }
+}

@@ -19,7 +19,7 @@
     "status": "error",
     "error": "Input contains NaN"
   },
-  "training_completed": "2025-07-14T00:26:43.086464",
+  "training_completed": "2025-07-18T04:08:11.145122",
   "data_sources_used": [
     "sales",
     "demand",

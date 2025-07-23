@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(streamlit run:*)",
+      "Bash(mkdir:*)",
+      "Bash(python -m pip install:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(mv:*)",
+      "Bash(PYTHONPATH=/mnt/c/Users/psytz/32/efab.ai python3 -c \"from api.main import app; print(''✅ FastAPI application imports successfully with validation middleware'')\")",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(git config:*)",
+      "Bash(pip install:*)",
+      "Bash(chmod:*)",
+      "WebFetch(domain:efab.bkiapps.com)",
+      "Bash(touch:*)",
+      "Bash(pip3 install:*)",
+      "Bash(source:*)"
+    ],
+    "deny": []
+  }
+}

@@ -11,6 +11,23 @@ loguru==0.7.2
 pytest==8.0.0
 pytest-cov==4.0.0
 
+# FastAPI Dependencies
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Authentication Dependencies
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.0
+pydantic-settings==2.1.0
+psutil==5.9.8
+
+# Database Dependencies
+sqlalchemy==2.0.25
+alembic==1.13.1
+psycopg2-binary==2.9.9
+
 # ML/AI Dependencies
 tensorflow>=2.13.0
 torch>=2.0.0

@@ -1,0 +1,24 @@
+{
+  "version": "v1.0_20250718_193905",
+  "timestamp": "2025-07-18T19:39:05.009621",
+  "model_type": "RandomForestRegressor",
+  "dataset_version": "erp_v1.0",
+  "performance_metrics": {
+    "cv_mean": 0.985388757509946,
+    "cv_std": 0.005892135450992125,
+    "task_type": "regression"
+  },
+  "hyperparameters": {
+    "max_depth": 15,
+    "min_samples_split": 2,
+    "n_estimators": 100
+  },
+  "feature_importance": {
+    "current_stock": 0.9705041526246971,
+    "lead_time": 0.004062365376693765,
+    "demand_variance": 0.02150770798051394,
+    "cost_per_unit": 0.002434828201656914,
+    "supplier_reliability": 0.001490945816438207
+  },
+  "validation_scores": "[0.98669449 0.99153712 0.98191493 0.9758458  0.99095145]"
+}

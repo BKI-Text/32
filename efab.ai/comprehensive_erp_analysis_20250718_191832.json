@@ -1,0 +1,2812 @@
+{
+  "data_landscape": {
+    "analysis_timestamp": "2025-07-18T19:18:32.505793",
+    "total_endpoints": 7,
+    "accessible_endpoints": 7,
+    "total_fields": 171,
+    "high_value_fields": 13,
+    "ml_ready_endpoints": 2,
+    "estimated_records": 7000,
+    "data_categories": {
+      "demand_forecasting": [
+        "/report/yarn_demand"
+      ],
+      "inventory_optimization": [],
+      "supplier_performance": [],
+      "seasonal_patterns": [],
+      "cost_prediction": [],
+      "quality_metrics": []
+    },
+    "training_datasets": [
+      {
+        "name": "Demand Forecasting Dataset",
+        "description": "Historical demand and sales data for ML forecasting models",
+        "endpoints": [
+          "/report/yarn_demand"
+        ],
+        "ml_models": [
+          "ARIMA",
+          "Prophet",
+          "LSTM",
+          "XGBoost"
+        ],
+        "target_variable": "demand_quantity",
+        "features": [
+          "date",
+          "product_id",
+          "historical_demand",
+          "seasonality"
+        ],
+        "estimated_records": 1000,
+        "business_value": "CRITICAL",
+        "implementation_priority": 1
+      },
+      {
+        "name": "Inventory Optimization Dataset",
+        "description": "Inventory levels and movement patterns for optimization",
+        "endpoints": [
+          "/yarn",
+          "/report/yarn_demand",
+          "/report/expected_yarn",
+          "/yarn/po/list"
+        ],
+        "ml_models": [
+          "XGBoost",
+          "Random Forest",
+          "Linear Regression"
+        ],
+        "target_variable": "optimal_inventory_level",
+        "features": [
+          "current_stock",
+          "lead_time",
+          "demand_variability",
+          "cost"
+        ],
+        "estimated_records": 4000,
+        "business_value": "HIGH",
+        "implementation_priority": 2
+      },
+      {
+        "name": "Supplier Performance Dataset",
+        "description": "Supplier reliability and performance metrics",
+        "endpoints": [
+          "/report/yarn_demand",
+          "/report/expected_yarn",
+          "/yarn/po/list"
+        ],
+        "ml_models": [
+          "Classification",
+          "Regression",
+          "Clustering"
+        ],
+        "target_variable": "supplier_reliability_score",
+        "features": [
+          "delivery_time",
+          "quality_score",
+          "cost_variance",
+          "order_frequency"
+        ],
+        "estimated_records": 3000,
+        "business_value": "HIGH",
+        "implementation_priority": 3
+      }
+    ],
+    "integration_roadmap": [
+      {
+        "phase": "Phase 2: ML Training Pipeline",
+        "duration": "3-4 weeks",
+        "endpoints": [
+          "/yarn/po/list",
+          "/fabric"
+        ],
+        "objectives": [
+          "Build ML training datasets",
+          "Train initial models",
+          "Validate model performance"
+        ],
+        "deliverables": [
+          "ML training pipeline",
+          "Trained models",
+          "Model validation reports"
+        ],
+        "success_metrics": [
+          "Model accuracy > 80%",
+          "3+ ML models trained",
+          "Automated retraining"
+        ]
+      },
+      {
+        "phase": "Phase 3: Advanced Integration",
+        "duration": "4-5 weeks",
+        "endpoints": [
+          "/fabric"
+        ],
+        "objectives": [
+          "Complete data landscape",
+          "Advanced analytics",
+          "Full automation"
+        ],
+        "deliverables": [
+          "Complete data warehouse",
+          "Advanced dashboards",
+          "Predictive analytics"
+        ],
+        "success_metrics": [
+          "All endpoints integrated",
+          "Real-time processing",
+          "Business KPIs improved"
+        ]
+      }
+    ]
+  },
+  "endpoint_analyses": {
+    "/yarn": {
+      "endpoint": "/yarn",
+      "url": "https://efab.bkiapps.com/yarn",
+      "status": "SUCCESS",
+      "record_count_estimate": 1000,
+      "data_fields": [
+        {
+          "name": "pbalance",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "MEDIUM",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "t_balance",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "MEDIUM",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarnInventory",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "MEDIUM",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "description",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "color_name",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "reconciled_qty",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "desc_number",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "navDetails",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "viewport",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_string",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "added",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "allocated",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_form",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "adjustments",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "note",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "onorder",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "consumed",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "delta",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "qs_yarn_customer_code",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "misc",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "subForm",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "popupFormDiv",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarnInfoPopup",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "reconciled_date",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": true,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "cost_total",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "supplier",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "cost_avg",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        }
+      ],
+      "data_quality_score": 0.9277777777777778,
+      "ml_training_potential": "MEDIUM",
+      "historical_data_available": true,
+      "recommended_extraction_frequency": "DAILY",
+      "business_priority": "CRITICAL",
+      "technical_complexity": "HIGH"
+    },
+    "/fabric/so/list": {
+      "endpoint": "/fabric/so/list",
+      "url": "https://efab.bkiapps.com/fabric/so/list",
+      "status": "SUCCESS",
+      "record_count_estimate": 1000,
+      "data_fields": [
+        {
+          "name": "status",
+          "data_type": "categorical",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.1,
+          "ml_potential": "MEDIUM",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": true
+        },
+        {
+          "name": "sales_order_plan_line.sales_order_plan.customer_service_rep.name",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "sales_order_plan_line.sales_order_plan.bill_to.name",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "sales_order_plan_line.sales_order_plan.sales_rep.name",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "effective_purchase_order",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "fabricInfoPopup",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "navDetails",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "actions",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "sales_order_plan_line.f_version.f_base.base_style",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "csr_released",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "holdButton_",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "viewport",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_string",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "shipping_order.shipped_dt",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "ship_to",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "shipped",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_form",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "serial_number",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "cf_version.code",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "fabricSOs",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "pick_available",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "cacheAge",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "qty",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "created",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "sop",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "requested_date",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": true,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "quoted_date",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": true,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "unit_price",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        }
+      ],
+      "data_quality_score": 0.9375,
+      "ml_training_potential": "MEDIUM",
+      "historical_data_available": true,
+      "recommended_extraction_frequency": "DAILY",
+      "business_priority": "LOW",
+      "technical_complexity": "MEDIUM"
+    },
+    "/report/yarn_demand": {
+      "endpoint": "/report/yarn_demand",
+      "url": "https://efab.bkiapps.com/report/yarn_demand",
+      "status": "SUCCESS",
+      "record_count_estimate": 1000,
+      "data_fields": [
+        {
+          "name": "count_5",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_0",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "navDetails",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_1",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "viewport",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_string",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_4",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_3",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_form",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "reportGrid",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_8",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_7",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "total",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn_desc",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_2",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "style",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "percent",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "later",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_6",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        }
+      ],
+      "data_quality_score": 0.9078947368421053,
+      "ml_training_potential": "LOW",
+      "historical_data_available": false,
+      "recommended_extraction_frequency": "WEEKLY",
+      "business_priority": "CRITICAL",
+      "technical_complexity": "MEDIUM"
+    },
+    "/report/expected_yarn": {
+      "endpoint": "/report/expected_yarn",
+      "url": "https://efab.bkiapps.com/report/expected_yarn",
+      "status": "SUCCESS",
+      "record_count_estimate": 1000,
+      "data_fields": [
+        {
+          "name": "yarn.yarn_type.name",
+          "data_type": "categorical",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.1,
+          "ml_potential": "MEDIUM",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": true
+        },
+        {
+          "name": "balance",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "MEDIUM",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.color_name",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "purchased_from.long_name",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.size",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.ply",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_5",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_0",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "navDetails",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_1",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "viewport",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_string",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_4",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.blend_perc",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "serial_number_link",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_3",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_form",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "serial_number",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "reportGrid",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_8",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.filament",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_7",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.reconciled_qty",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_9",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "qty_ordered",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "past_due",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.desc_number",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_2",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "qty_received",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "count_6",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "created_date",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": true,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "unit_price",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        }
+      ],
+      "data_quality_score": 0.9375,
+      "ml_training_potential": "MEDIUM",
+      "historical_data_available": true,
+      "recommended_extraction_frequency": "DAILY",
+      "business_priority": "LOW",
+      "technical_complexity": "MEDIUM"
+    },
+    "/yarn/po/list": {
+      "endpoint": "/yarn/po/list",
+      "url": "https://efab.bkiapps.com/yarn/po/list",
+      "status": "SUCCESS",
+      "record_count_estimate": 1000,
+      "data_fields": [
+        {
+          "name": "yarn.yarn_type.name",
+          "data_type": "categorical",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.1,
+          "ml_potential": "MEDIUM",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": true
+        },
+        {
+          "name": "yarnInventory",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "MEDIUM",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.color_name",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "purchased_from.name",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.description",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarn.desc_number",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarnInfoPopup",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "viewport",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "qty_ordered",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_string",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "navDetails",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_form",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "serial_number",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "requested_date",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": true,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "quoted_date",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": true,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "created_date",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": true,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "unit_price",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "totalPrice",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        }
+      ],
+      "data_quality_score": 0.9583333333333334,
+      "ml_training_potential": "HIGH",
+      "historical_data_available": true,
+      "recommended_extraction_frequency": "DAILY",
+      "business_priority": "CRITICAL",
+      "technical_complexity": "HIGH"
+    },
+    "/fabric": {
+      "endpoint": "/fabric",
+      "url": "https://efab.bkiapps.com/fabric",
+      "status": "SUCCESS",
+      "record_count_estimate": 1000,
+      "data_fields": [
+        {
+          "name": "type",
+          "data_type": "categorical",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.1,
+          "ml_potential": "MEDIUM",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": true
+        },
+        {
+          "name": "fabricInventory",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "MEDIUM",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "fabricInfoPopup",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "navDetails",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "actions",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "viewport",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_string",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "warehouse",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "location",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_form",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "qltyOrigin",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "knitStyle",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "quantity",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "totalCost",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "reworkCost",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "freightCost",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "plCost",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "finishCost",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "yarnCost",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "knitCost",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "HIGH",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        }
+      ],
+      "data_quality_score": 0.96,
+      "ml_training_potential": "HIGH",
+      "historical_data_available": false,
+      "recommended_extraction_frequency": "WEEKLY",
+      "business_priority": "HIGH",
+      "technical_complexity": "MEDIUM"
+    },
+    "/dashboard": {
+      "endpoint": "/dashboard",
+      "url": "https://efab.bkiapps.com/dashboard",
+      "status": "SUCCESS",
+      "record_count_estimate": 1000,
+      "data_fields": [
+        {
+          "name": "balance",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "MEDIUM",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "csr_name",
+          "data_type": "text",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "MEDIUM",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "related_dop",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "chooseCSR",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "gridKnitToShip",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "knitTemplate",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "navDetails",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "qty_G00",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "viewport",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_string",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "gridKnitToClose",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "search_form",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "serial_number",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "modified",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "related_dop_release_control",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "machine",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "dops",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "qty_ordered",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "qty_shipped",
+          "data_type": "numeric",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": true,
+          "categorical_indicator": false
+        },
+        {
+          "name": "gridKnitDueSoon",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "style",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "roll_size",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "related_dop_lot_size",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "bki",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.8,
+          "uniqueness": 0.5,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "gridKnitPastDue",
+          "data_type": "unknown",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 1.0,
+          "ml_potential": "LOW",
+          "business_value": "LOW",
+          "temporal_indicator": false,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "requested_date",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": true,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        },
+        {
+          "name": "quoted_date",
+          "data_type": "datetime",
+          "sample_values": [
+            "sample_value_1",
+            "sample_value_2"
+          ],
+          "completeness": 0.95,
+          "uniqueness": 0.5,
+          "ml_potential": "HIGH",
+          "business_value": "LOW",
+          "temporal_indicator": true,
+          "numeric_indicator": false,
+          "categorical_indicator": false
+        }
+      ],
+      "data_quality_score": 0.9555555555555555,
+      "ml_training_potential": "MEDIUM",
+      "historical_data_available": true,
+      "recommended_extraction_frequency": "DAILY",
+      "business_priority": "LOW",
+      "technical_complexity": "MEDIUM"
+    }
+  },
+  "metadata": {
+    "analysis_date": "2025-07-18T19:18:32.506347",
+    "analyzer_version": "1.0",
+    "erp_system": "Efab ERP"
+  }
+}

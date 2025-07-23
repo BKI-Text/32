@@ -1,0 +1,97 @@
+# Development Docker Compose configuration
+version: '3.8'
+
+services:
+  # Development application service
+  app-dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: development
+    container_name: beverly-knits-app-dev
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+      - DEBUG=true
+      - ENABLE_AI_INTEGRATION=true
+      - DB_HOST=postgres-dev
+      - DB_PORT=5432
+      - DB_NAME=beverly_knits_dev
+      - DB_USER=postgres
+      - DB_PASSWORD=dev_password
+    volumes:
+      - ..:/app
+      - dev_data:/app/data
+      - dev_logs:/app/logs
+    depends_on:
+      - postgres-dev
+    networks:
+      - beverly-knits-dev-network
+    restart: unless-stopped
+
+  # Development PostgreSQL database
+  postgres-dev:
+    image: postgres:15-alpine
+    container_name: beverly-knits-postgres-dev
+    environment:
+      - POSTGRES_DB=beverly_knits_dev
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=dev_password
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    networks:
+      - beverly-knits-dev-network
+    restart: unless-stopped
+
+  # Development Redis
+  redis-dev:
+    image: redis:7-alpine
+    container_name: beverly-knits-redis-dev
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis_dev_data:/data
+    networks:
+      - beverly-knits-dev-network
+    restart: unless-stopped
+
+  # Jupyter notebook for development
+  jupyter:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: ml-training
+    container_name: beverly-knits-jupyter
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - ..:/app
+      - jupyter_data:/home/jovyan/work
+    networks:
+      - beverly-knits-dev-network
+    command: >
+      bash -c "
+        pip install jupyter jupyterlab &&
+        jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+      "
+
+volumes:
+  dev_data:
+    driver: local
+  dev_logs:
+    driver: local
+  postgres_dev_data:
+    driver: local
+  redis_dev_data:
+    driver: local
+  jupyter_data:
+    driver: local
+
+networks:
+  beverly-knits-dev-network:
+    driver: bridge
