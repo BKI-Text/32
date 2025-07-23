@@ -1,0 +1,29 @@
+{
+  "version": "v1.0_20250718_193911",
+  "timestamp": "2025-07-18T19:39:11.200237",
+  "model_type": "GradientBoostingClassifier",
+  "dataset_version": "erp_v1.0",
+  "performance_metrics": {
+    "cv_mean": 0.9375,
+    "cv_std": 0.04419417382415922,
+    "task_type": "classification"
+  },
+  "hyperparameters": {
+    "learning_rate": 0.2,
+    "max_depth": 4,
+    "n_estimators": 100
+  },
+  "feature_importance": {
+    "delivery_time": 0.8582901068578331,
+    "quality_rating": 0.12432322306115084,
+    "cost_variance": 0.013741494569264592,
+    "order_frequency": 0.0020169399288037554,
+    "payment_terms": 1.28973669744741e-05,
+    "supplier_Acme Yarns": 5.858771029681444e-13,
+    "supplier_Budget Materials": 9.682679268191769e-06,
+    "supplier_Global Textiles": 4.044549111393113e-06,
+    "supplier_Premium Supplies": 0.0003775563811168871,
+    "supplier_Reliable Corp": 0.0012240546058907222
+  },
+  "validation_scores": "[0.90625 0.96875 0.9375  0.875   1.     ]"
+}

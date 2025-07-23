@@ -1,0 +1,203 @@
+version: '3.8'
+
+services:
+  # Main application service
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: production
+    container_name: beverly-knits-app
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DEBUG=false
+      - ENABLE_AI_INTEGRATION=true
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=beverly_knits
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres_password
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - app_data:/app/data
+      - app_logs:/app/logs
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - beverly-knits-network
+    restart: unless-stopped
+
+  # ML Training service
+  ml-training:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: ml-training
+    container_name: beverly-knits-ml-training
+    environment:
+      - ENVIRONMENT=training
+      - ENABLE_AI_INTEGRATION=true
+    volumes:
+      - ml_models:/app/models/trained
+      - training_data:/app/data/training
+      - app_logs:/app/logs
+    networks:
+      - beverly-knits-network
+    profiles:
+      - training
+
+  # ML Inference service
+  ml-inference:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: ml-inference
+    container_name: beverly-knits-ml-inference
+    ports:
+      - "8001:8000"
+    environment:
+      - ENVIRONMENT=inference
+      - ENABLE_AI_INTEGRATION=true
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - ml_models:/app/models/trained
+      - app_logs:/app/logs
+    depends_on:
+      - redis
+    networks:
+      - beverly-knits-network
+    restart: unless-stopped
+
+  # PostgreSQL database
+  postgres:
+    image: postgres:15-alpine
+    container_name: beverly-knits-postgres
+    environment:
+      - POSTGRES_DB=beverly_knits
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - beverly-knits-network
+    restart: unless-stopped
+
+  # Redis for caching and message queuing
+  redis:
+    image: redis:7-alpine
+    container_name: beverly-knits-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - beverly-knits-network
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: beverly-knits-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - app
+      - ml-inference
+    networks:
+      - beverly-knits-network
+    restart: unless-stopped
+
+  # Monitoring with Prometheus
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: beverly-knits-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - beverly-knits-network
+    restart: unless-stopped
+    profiles:
+      - monitoring
+
+  # Grafana for dashboards
+  grafana:
+    image: grafana/grafana:latest
+    container_name: beverly-knits-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    networks:
+      - beverly-knits-network
+    restart: unless-stopped
+    profiles:
+      - monitoring
+
+  # MLflow for experiment tracking
+  mlflow:
+    image: python:3.11-slim
+    container_name: beverly-knits-mlflow
+    ports:
+      - "5000:5000"
+    environment:
+      - MLFLOW_BACKEND_STORE_URI=postgresql://postgres:postgres_password@postgres:5432/mlflow
+      - MLFLOW_DEFAULT_ARTIFACT_ROOT=/mlflow/artifacts
+    volumes:
+      - mlflow_artifacts:/mlflow/artifacts
+    depends_on:
+      - postgres
+    networks:
+      - beverly-knits-network
+    restart: unless-stopped
+    profiles:
+      - mlflow
+    command: >
+      bash -c "
+        pip install mlflow psycopg2-binary &&
+        mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri postgresql://postgres:postgres_password@postgres:5432/mlflow --default-artifact-root /mlflow/artifacts
+      "
+
+volumes:
+  app_data:
+    driver: local
+  app_logs:
+    driver: local
+  ml_models:
+    driver: local
+  training_data:
+    driver: local
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+  mlflow_artifacts:
+    driver: local
+
+networks:
+  beverly-knits-network:
+    driver: bridge

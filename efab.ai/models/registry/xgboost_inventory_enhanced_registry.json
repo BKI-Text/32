@@ -1,0 +1,24 @@
+{
+  "version": "v1.0_20250718_193900",
+  "timestamp": "2025-07-18T19:39:00.146890",
+  "model_type": "XGBRegressor",
+  "dataset_version": "erp_v1.0",
+  "performance_metrics": {
+    "cv_mean": 0.9920154094696045,
+    "cv_std": 0.0035110543939299178,
+    "task_type": "regression"
+  },
+  "hyperparameters": {
+    "learning_rate": 0.1,
+    "max_depth": 4,
+    "n_estimators": 200
+  },
+  "feature_importance": {
+    "current_stock": "0.967004",
+    "lead_time": "0.007536366",
+    "demand_variance": "0.024116883",
+    "cost_per_unit": "0.000986929",
+    "supplier_reliability": "0.0003558596"
+  },
+  "validation_scores": "[0.99285674 0.99583834 0.98671579 0.98933083 0.99533534]"
+}

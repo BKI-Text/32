@@ -1,0 +1,30 @@
+{
+  "version": "v1.0_20250718_193826",
+  "timestamp": "2025-07-18T19:38:26.917313",
+  "model_type": "XGBRegressor",
+  "dataset_version": "erp_v1.0",
+  "performance_metrics": {
+    "cv_mean": 0.9814211845397949,
+    "cv_std": 0.001953505429831249,
+    "task_type": "regression"
+  },
+  "hyperparameters": {
+    "learning_rate": 0.1,
+    "max_depth": 4,
+    "n_estimators": 100,
+    "subsample": 0.8
+  },
+  "feature_importance": {
+    "month": "0.0051689083",
+    "historical_avg": "0.5374611",
+    "seasonal_factor": "0.43110484",
+    "supplier_count": "0.0040444117",
+    "yarn_1/150 nat poly": "0.003990435",
+    "yarn_1/300 nat poly": "0.003049267",
+    "yarn_2/300 nat poly": "0.003494241",
+    "yarn_Cotton blend": "0.0036784234",
+    "yarn_Nylon base": "0.0041584736",
+    "yarn_Viscose mix": "0.003849879"
+  },
+  "validation_scores": "[0.97842562 0.98152715 0.98438615 0.98057652 0.98219049]"
+}

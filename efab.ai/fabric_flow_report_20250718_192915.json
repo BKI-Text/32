@@ -1,0 +1,156 @@
+{
+  "analysis_timestamp": "2025-07-18T19:29:15.036246",
+  "summary": {
+    "total_fabric_quantity": 50917.48999999999,
+    "total_records": 73,
+    "quality_yield_rate": 0.8923076923076924,
+    "allocation_rate": 0.3333333333333333,
+    "avg_cycle_time_days": 19.726027397260275,
+    "bottleneck_stages": [
+      "BH",
+      "G00",
+      "F02",
+      "G02",
+      "F09",
+      "G09",
+      "P01",
+      "G04",
+      "I01",
+      "F08",
+      "F01",
+      "T01"
+    ]
+  },
+  "status_distribution": {
+    "G00": 15.96700858585135,
+    "G02": 9.638122381916313,
+    "G04": 6.703511897385359,
+    "I01": 9.441470897328209,
+    "F01": 28.07722847296676,
+    "F02": 13.240538761828208,
+    "P01": 9.466845282436351,
+    "T01": 3.8388184492204944,
+    "F08": 0.6419797990827907,
+    "F09": 1.0521139199909502,
+    "BH": 1.1928710547200974,
+    "G09": 0.7394904972731374
+  },
+  "flow_state_summary": {
+    "raw_materials": 8130.000000000001,
+    "in_production": 15082.740000000002,
+    "finished_goods": 21037.97,
+    "allocated": 4820.28,
+    "quarantined": 1239.12,
+    "shipped": 607.38
+  },
+  "stage_performance": [
+    {
+      "stage": "F01",
+      "total_quantity": 14296.22,
+      "avg_dwell_time_days": 20.0,
+      "throughput_rate": 14296.22,
+      "quality_issues": 0,
+      "capacity_utilization": 1.0
+    },
+    {
+      "stage": "G00",
+      "total_quantity": 8130.0,
+      "avg_dwell_time_days": 7.25,
+      "throughput_rate": 4065.0,
+      "quality_issues": 0,
+      "capacity_utilization": 2.0
+    },
+    {
+      "stage": "F02",
+      "total_quantity": 6741.75,
+      "avg_dwell_time_days": 24.0,
+      "throughput_rate": 6741.75,
+      "quality_issues": 0,
+      "capacity_utilization": 1.0
+    },
+    {
+      "stage": "G02",
+      "total_quantity": 4907.49,
+      "avg_dwell_time_days": 25.25,
+      "throughput_rate": 981.4979999999999,
+      "quality_issues": 0,
+      "capacity_utilization": 2.0
+    },
+    {
+      "stage": "P01",
+      "total_quantity": 4820.28,
+      "avg_dwell_time_days": 17.0,
+      "throughput_rate": 4820.28,
+      "quality_issues": 0,
+      "capacity_utilization": 1.0
+    },
+    {
+      "stage": "I01",
+      "total_quantity": 4807.36,
+      "avg_dwell_time_days": 18.875,
+      "throughput_rate": 4807.36,
+      "quality_issues": 0,
+      "capacity_utilization": 2.0
+    },
+    {
+      "stage": "G04",
+      "total_quantity": 3413.2599999999998,
+      "avg_dwell_time_days": 19.125,
+      "throughput_rate": 487.6085714285714,
+      "quality_issues": 0,
+      "capacity_utilization": 2.0
+    },
+    {
+      "stage": "T01",
+      "total_quantity": 1954.63,
+      "avg_dwell_time_days": 21.75,
+      "throughput_rate": 651.5433333333334,
+      "quality_issues": 0,
+      "capacity_utilization": 2.0
+    },
+    {
+      "stage": "BH",
+      "total_quantity": 607.38,
+      "avg_dwell_time_days": 14.5,
+      "throughput_rate": 607.38,
+      "quality_issues": 0,
+      "capacity_utilization": 2.0
+    },
+    {
+      "stage": "F09",
+      "total_quantity": 535.71,
+      "avg_dwell_time_days": 19.0,
+      "throughput_rate": 535.71,
+      "quality_issues": 3,
+      "capacity_utilization": 2.0
+    },
+    {
+      "stage": "G09",
+      "total_quantity": 376.53,
+      "avg_dwell_time_days": 40.0,
+      "throughput_rate": 376.53,
+      "quality_issues": 1,
+      "capacity_utilization": 2.0
+    },
+    {
+      "stage": "F08",
+      "total_quantity": 326.88,
+      "avg_dwell_time_days": 29.333333333333332,
+      "throughput_rate": 326.88,
+      "quality_issues": 3,
+      "capacity_utilization": 2.0
+    }
+  ],
+  "alerts": {
+    "slow_moving_inventory": 9,
+    "quality_control_queue": 16,
+    "allocation_opportunities": 16,
+    "quarantined_items": 7
+  },
+  "recommendations": [
+    "Quality yield rate is 89.2%. Consider reviewing quality control processes and supplier performance.",
+    "Allocation rate is 33.3%. Consider improving demand forecasting or sales order processing.",
+    "Bottlenecks identified in stages: BH, G00, F02, G02, F09, G09, P01, G04, I01, F08, F01, T01. Consider capacity planning or process optimization.",
+    "High capacity utilization in stages: G00, G02, I01, G04, T01, BH, F09, G09, F08. Consider adding capacity or improving efficiency."
+  ]
+}

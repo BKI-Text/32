@@ -1,0 +1,9 @@
+{
+  "erp_type": "efab",
+  "base_url": "https://efab.bkiapps.com",
+  "username": "psytz",
+  "password": "big$cat",
+  "auto_sync": true,
+  "sync_interval_hours": 24,
+  "sync_on_startup": true
+}

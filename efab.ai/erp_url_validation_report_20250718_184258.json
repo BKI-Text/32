@@ -1,0 +1,176 @@
+{
+  "validation_timestamp": "2025-07-18T18:42:58.228672",
+  "total_urls_tested": 8,
+  "accessible_urls_count": 5,
+  "success_rate": 62.5,
+  "url_validation_results": {
+    "Current Inventory": {
+      "url_name": "Current Inventory",
+      "url_path": "/yarn",
+      "full_url": "https://efab.bkiapps.com/yarn",
+      "status_code": 200,
+      "accessible": true,
+      "content_length": 34851,
+      "content_type": "text/html; charset=UTF-8",
+      "validation_timestamp": "2025-07-18T18:42:57.717297",
+      "has_tables": true,
+      "has_forms": true,
+      "has_devextreme": false,
+      "table_count": 2,
+      "estimated_data_richness": 85,
+      "sample_file": "sample_current_inventory.html"
+    },
+    "Sales Orders": {
+      "url_name": "Sales Orders",
+      "url_path": "/fabric/so/list",
+      "full_url": "https://efab.bkiapps.com/fabric/so/list",
+      "status_code": 200,
+      "accessible": true,
+      "content_length": 37724,
+      "content_type": "text/html; charset=UTF-8",
+      "validation_timestamp": "2025-07-18T18:42:57.804035",
+      "has_tables": false,
+      "has_forms": true,
+      "has_devextreme": false,
+      "table_count": 0,
+      "estimated_data_richness": 59,
+      "sample_file": "sample_sales_orders.html"
+    },
+    "Yarn Demand Report": {
+      "url_name": "Yarn Demand Report",
+      "url_path": "/report/yarn_demand",
+      "full_url": "https://efab.bkiapps.com/report/yarn_demand",
+      "status_code": 200,
+      "accessible": true,
+      "content_length": 29119,
+      "content_type": "text/html; charset=UTF-8",
+      "validation_timestamp": "2025-07-18T18:42:57.896831",
+      "has_tables": false,
+      "has_forms": true,
+      "has_devextreme": false,
+      "table_count": 0,
+      "estimated_data_richness": 38,
+      "sample_file": "sample_yarn_demand_report.html"
+    },
+    "Expected Yarn Report": {
+      "url_name": "Expected Yarn Report",
+      "url_path": "/report/expected_yarn",
+      "full_url": "https://efab.bkiapps.com/report/expected_yarn",
+      "status_code": 200,
+      "accessible": true,
+      "content_length": 30906,
+      "content_type": "text/html; charset=UTF-8",
+      "validation_timestamp": "2025-07-18T18:42:57.977310",
+      "has_tables": false,
+      "has_forms": true,
+      "has_devextreme": false,
+      "table_count": 0,
+      "estimated_data_richness": 64,
+      "sample_file": "sample_expected_yarn_report.html"
+    },
+    "Purchase Orders": {
+      "url_name": "Purchase Orders",
+      "url_path": "/yarn/po/list",
+      "full_url": "https://efab.bkiapps.com/yarn/po/list",
+      "status_code": 200,
+      "accessible": true,
+      "content_length": 30964,
+      "content_type": "text/html; charset=UTF-8",
+      "validation_timestamp": "2025-07-18T18:42:58.054627",
+      "has_tables": true,
+      "has_forms": true,
+      "has_devextreme": false,
+      "table_count": 2,
+      "estimated_data_richness": 65,
+      "sample_file": "sample_purchase_orders.html"
+    },
+    "Supplier Performance": {
+      "url_name": "Supplier Performance",
+      "url_path": "/suppliers",
+      "full_url": "https://efab.bkiapps.com/suppliers",
+      "status_code": 404,
+      "accessible": false,
+      "content_length": 1272,
+      "content_type": "text/html; charset=UTF-8",
+      "validation_timestamp": "2025-07-18T18:42:58.115847"
+    },
+    "Cost Analysis": {
+      "url_name": "Cost Analysis",
+      "url_path": "/reports/cost",
+      "full_url": "https://efab.bkiapps.com/reports/cost",
+      "status_code": 404,
+      "accessible": false,
+      "content_length": 1272,
+      "content_type": "text/html; charset=UTF-8",
+      "validation_timestamp": "2025-07-18T18:42:58.171173"
+    },
+    "Material Master": {
+      "url_name": "Material Master",
+      "url_path": "/materials",
+      "full_url": "https://efab.bkiapps.com/materials",
+      "status_code": 404,
+      "accessible": false,
+      "content_length": 1272,
+      "content_type": "text/html; charset=UTF-8",
+      "validation_timestamp": "2025-07-18T18:42:58.228494"
+    }
+  },
+  "integration_recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "Data Integration",
+      "title": "Integrate 5 high-priority data sources",
+      "description": "These URLs contain rich data structures that will significantly enhance the AI planning system",
+      "urls": [
+        "Current Inventory",
+        "Purchase Orders",
+        "Expected Yarn Report",
+        "Sales Orders",
+        "Yarn Demand Report"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "category": "Production Deployment",
+      "title": "Deploy enhanced Beverly Knits AI system",
+      "description": "With validated ERP URLs, the system is ready for production deployment with daily planning capabilities",
+      "next_steps": [
+        "Configure daily sync schedule",
+        "Set up monitoring and alerts",
+        "Train users on new features"
+      ]
+    }
+  ],
+  "priority_urls": [
+    {
+      "name": "Current Inventory",
+      "url": "/yarn",
+      "data_richness": 85,
+      "priority": "HIGH"
+    },
+    {
+      "name": "Purchase Orders",
+      "url": "/yarn/po/list",
+      "data_richness": 65,
+      "priority": "HIGH"
+    },
+    {
+      "name": "Expected Yarn Report",
+      "url": "/report/expected_yarn",
+      "data_richness": 64,
+      "priority": "HIGH"
+    },
+    {
+      "name": "Sales Orders",
+      "url": "/fabric/so/list",
+      "data_richness": 59,
+      "priority": "HIGH"
+    },
+    {
+      "name": "Yarn Demand Report",
+      "url": "/report/yarn_demand",
+      "data_richness": 38,
+      "priority": "HIGH"
+    }
+  ]
+}

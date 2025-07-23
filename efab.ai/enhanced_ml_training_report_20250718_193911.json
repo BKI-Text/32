@@ -1,0 +1,318 @@
+{
+  "training_timestamp": "2025-07-18T19:39:11.205989",
+  "summary": {
+    "total_models_trained": 7,
+    "valid_models": 7,
+    "invalid_models": 0,
+    "success_rate": 1.0,
+    "average_performance": 0.9699270733858396,
+    "best_model": "xgboost_inventory_enhanced",
+    "best_performance": 0.9942060708999634
+  },
+  "valid_models": [
+    {
+      "model_name": "xgboost_demand_enhanced",
+      "test_score": 0.9763583540916443,
+      "validation_score": 0.9814211845397949,
+      "cv_mean": 0.9814211845397949,
+      "cv_std": 0.001953505429831249,
+      "top_features": {
+        "historical_avg": "0.5374611",
+        "seasonal_factor": "0.43110484",
+        "month": "0.0051689083",
+        "yarn_Nylon base": "0.0041584736",
+        "supplier_count": "0.0040444117"
+      }
+    },
+    {
+      "model_name": "random_forest_demand_enhanced",
+      "test_score": 0.9770639706297461,
+      "validation_score": 0.9818308322013307,
+      "cv_mean": 0.9818308322013307,
+      "cv_std": 0.0022914250347162743,
+      "top_features": {
+        "historical_avg": 0.8095356592192298,
+        "seasonal_factor": 0.18361221427039778,
+        "month": 0.0021176810914781546,
+        "supplier_count": 0.0016915621723846597,
+        "yarn_Viscose mix": 0.0007561802194085954
+      }
+    },
+    {
+      "model_name": "gradient_boost_demand_enhanced",
+      "test_score": 0.9783471104111926,
+      "validation_score": 0.9816322946899995,
+      "cv_mean": 0.9816322946899995,
+      "cv_std": 0.0016112153490874322,
+      "top_features": {
+        "historical_avg": 0.7970577155484069,
+        "seasonal_factor": 0.19794844679782023,
+        "month": 0.0024128069319399696,
+        "supplier_count": 0.0008015236418433439,
+        "yarn_1/150 nat poly": 0.0006158287221262614
+      }
+    },
+    {
+      "model_name": "xgboost_inventory_enhanced",
+      "test_score": 0.9942060708999634,
+      "validation_score": 0.9920154094696045,
+      "cv_mean": 0.9920154094696045,
+      "cv_std": 0.0035110543939299178,
+      "top_features": {
+        "current_stock": "0.967004",
+        "demand_variance": "0.024116883",
+        "lead_time": "0.007536366",
+        "cost_per_unit": "0.000986929",
+        "supplier_reliability": "0.0003558596"
+      }
+    },
+    {
+      "model_name": "random_forest_inventory_enhanced",
+      "test_score": 0.9885140076683305,
+      "validation_score": 0.985388757509946,
+      "cv_mean": 0.985388757509946,
+      "cv_std": 0.005892135450992125,
+      "top_features": {
+        "current_stock": 0.9705041526246971,
+        "demand_variance": 0.02150770798051394,
+        "lead_time": 0.004062365376693765,
+        "cost_per_unit": 0.002434828201656914,
+        "supplier_reliability": 0.001490945816438207
+      }
+    },
+    {
+      "model_name": "random_forest_supplier_enhanced",
+      "test_score": 0.95,
+      "validation_score": 0.93125,
+      "cv_mean": 0.93125,
+      "cv_std": 0.023385358667337132,
+      "top_features": {
+        "delivery_time": 0.6175662643218138,
+        "quality_rating": 0.15727826525877017,
+        "cost_variance": 0.08568022675106174,
+        "order_frequency": 0.06325452220969902,
+        "payment_terms": 0.026003623333921876
+      }
+    },
+    {
+      "model_name": "gradient_boost_supplier_enhanced",
+      "test_score": 0.925,
+      "validation_score": 0.9375,
+      "cv_mean": 0.9375,
+      "cv_std": 0.04419417382415922,
+      "top_features": {
+        "delivery_time": 0.8582901068578331,
+        "quality_rating": 0.12432322306115084,
+        "cost_variance": 0.013741494569264592,
+        "order_frequency": 0.0020169399288037554,
+        "supplier_Reliable Corp": 0.0012240546058907222
+      }
+    }
+  ],
+  "invalid_models": [],
+  "model_versions": {
+    "xgboost_demand_enhanced": {
+      "version": "v1.0_20250718_193826",
+      "timestamp": "2025-07-18T19:38:26.917313",
+      "model_type": "XGBRegressor",
+      "dataset_version": "erp_v1.0",
+      "performance_metrics": {
+        "cv_mean": 0.9814211845397949,
+        "cv_std": 0.001953505429831249,
+        "task_type": "regression"
+      },
+      "hyperparameters": {
+        "learning_rate": 0.1,
+        "max_depth": 4,
+        "n_estimators": 100,
+        "subsample": 0.8
+      },
+      "feature_importance": {
+        "month": "0.0051689083",
+        "historical_avg": "0.5374611",
+        "seasonal_factor": "0.43110484",
+        "supplier_count": "0.0040444117",
+        "yarn_1/150 nat poly": "0.003990435",
+        "yarn_1/300 nat poly": "0.003049267",
+        "yarn_2/300 nat poly": "0.003494241",
+        "yarn_Cotton blend": "0.0036784234",
+        "yarn_Nylon base": "0.0041584736",
+        "yarn_Viscose mix": "0.003849879"
+      },
+      "validation_scores": "[0.97842562 0.98152715 0.98438615 0.98057652 0.98219049]"
+    },
+    "random_forest_demand_enhanced": {
+      "version": "v1.0_20250718_193850",
+      "timestamp": "2025-07-18T19:38:50.811124",
+      "model_type": "RandomForestRegressor",
+      "dataset_version": "erp_v1.0",
+      "performance_metrics": {
+        "cv_mean": 0.9818308322013307,
+        "cv_std": 0.0022914250347162743,
+        "task_type": "regression"
+      },
+      "hyperparameters": {
+        "max_depth": 10,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "n_estimators": 300
+      },
+      "feature_importance": {
+        "month": 0.0021176810914781546,
+        "historical_avg": 0.8095356592192298,
+        "seasonal_factor": 0.18361221427039778,
+        "supplier_count": 0.0016915621723846597,
+        "yarn_1/150 nat poly": 0.0006356798085411367,
+        "yarn_1/300 nat poly": 0.0003418050978147692,
+        "yarn_2/300 nat poly": 0.00048793649727164727,
+        "yarn_Cotton blend": 0.0004868335926374981,
+        "yarn_Nylon base": 0.00033444803083591113,
+        "yarn_Viscose mix": 0.0007561802194085954
+      },
+      "validation_scores": "[0.97738181 0.98214187 0.9832649  0.98261249 0.98375309]"
+    },
+    "gradient_boost_demand_enhanced": {
+      "version": "v1.0_20250718_193855",
+      "timestamp": "2025-07-18T19:38:55.002967",
+      "model_type": "GradientBoostingRegressor",
+      "dataset_version": "erp_v1.0",
+      "performance_metrics": {
+        "cv_mean": 0.9816322946899995,
+        "cv_std": 0.0016112153490874322,
+        "task_type": "regression"
+      },
+      "hyperparameters": {
+        "learning_rate": 0.1,
+        "max_depth": 4,
+        "n_estimators": 100,
+        "subsample": 0.8
+      },
+      "feature_importance": {
+        "month": 0.0024128069319399696,
+        "historical_avg": 0.7970577155484069,
+        "seasonal_factor": 0.19794844679782023,
+        "supplier_count": 0.0008015236418433439,
+        "yarn_1/150 nat poly": 0.0006158287221262614,
+        "yarn_1/300 nat poly": 0.0001647925341602782,
+        "yarn_2/300 nat poly": 0.00014176512327173177,
+        "yarn_Cotton blend": 0.00017250349379722271,
+        "yarn_Nylon base": 0.00014126010955981702,
+        "yarn_Viscose mix": 0.0005433570970742531
+      },
+      "validation_scores": "[0.97901827 0.98144394 0.98194017 0.98167426 0.98408483]"
+    },
+    "xgboost_inventory_enhanced": {
+      "version": "v1.0_20250718_193900",
+      "timestamp": "2025-07-18T19:39:00.146890",
+      "model_type": "XGBRegressor",
+      "dataset_version": "erp_v1.0",
+      "performance_metrics": {
+        "cv_mean": 0.9920154094696045,
+        "cv_std": 0.0035110543939299178,
+        "task_type": "regression"
+      },
+      "hyperparameters": {
+        "learning_rate": 0.1,
+        "max_depth": 4,
+        "n_estimators": 200
+      },
+      "feature_importance": {
+        "current_stock": "0.967004",
+        "lead_time": "0.007536366",
+        "demand_variance": "0.024116883",
+        "cost_per_unit": "0.000986929",
+        "supplier_reliability": "0.0003558596"
+      },
+      "validation_scores": "[0.99285674 0.99583834 0.98671579 0.98933083 0.99533534]"
+    },
+    "random_forest_inventory_enhanced": {
+      "version": "v1.0_20250718_193905",
+      "timestamp": "2025-07-18T19:39:05.009621",
+      "model_type": "RandomForestRegressor",
+      "dataset_version": "erp_v1.0",
+      "performance_metrics": {
+        "cv_mean": 0.985388757509946,
+        "cv_std": 0.005892135450992125,
+        "task_type": "regression"
+      },
+      "hyperparameters": {
+        "max_depth": 15,
+        "min_samples_split": 2,
+        "n_estimators": 100
+      },
+      "feature_importance": {
+        "current_stock": 0.9705041526246971,
+        "lead_time": 0.004062365376693765,
+        "demand_variance": 0.02150770798051394,
+        "cost_per_unit": 0.002434828201656914,
+        "supplier_reliability": 0.001490945816438207
+      },
+      "validation_scores": "[0.98669449 0.99153712 0.98191493 0.9758458  0.99095145]"
+    },
+    "random_forest_supplier_enhanced": {
+      "version": "v1.0_20250718_193907",
+      "timestamp": "2025-07-18T19:39:07.630976",
+      "model_type": "RandomForestClassifier",
+      "dataset_version": "erp_v1.0",
+      "performance_metrics": {
+        "cv_mean": 0.93125,
+        "cv_std": 0.023385358667337132,
+        "task_type": "classification"
+      },
+      "hyperparameters": {
+        "max_depth": 10,
+        "min_samples_split": 5,
+        "n_estimators": 200
+      },
+      "feature_importance": {
+        "delivery_time": 0.6175662643218138,
+        "quality_rating": 0.15727826525877017,
+        "cost_variance": 0.08568022675106174,
+        "order_frequency": 0.06325452220969902,
+        "payment_terms": 0.026003623333921876,
+        "supplier_Acme Yarns": 0.011076375388901138,
+        "supplier_Budget Materials": 0.011388092762678778,
+        "supplier_Global Textiles": 0.0077732004652578965,
+        "supplier_Premium Supplies": 0.008226702021060154,
+        "supplier_Reliable Corp": 0.011752727486835382
+      },
+      "validation_scores": "[0.9375  0.96875 0.90625 0.90625 0.9375 ]"
+    },
+    "gradient_boost_supplier_enhanced": {
+      "version": "v1.0_20250718_193911",
+      "timestamp": "2025-07-18T19:39:11.200237",
+      "model_type": "GradientBoostingClassifier",
+      "dataset_version": "erp_v1.0",
+      "performance_metrics": {
+        "cv_mean": 0.9375,
+        "cv_std": 0.04419417382415922,
+        "task_type": "classification"
+      },
+      "hyperparameters": {
+        "learning_rate": 0.2,
+        "max_depth": 4,
+        "n_estimators": 100
+      },
+      "feature_importance": {
+        "delivery_time": 0.8582901068578331,
+        "quality_rating": 0.12432322306115084,
+        "cost_variance": 0.013741494569264592,
+        "order_frequency": 0.0020169399288037554,
+        "payment_terms": 1.28973669744741e-05,
+        "supplier_Acme Yarns": 5.858771029681444e-13,
+        "supplier_Budget Materials": 9.682679268191769e-06,
+        "supplier_Global Textiles": 4.044549111393113e-06,
+        "supplier_Premium Supplies": 0.0003775563811168871,
+        "supplier_Reliable Corp": 0.0012240546058907222
+      },
+      "validation_scores": "[0.90625 0.96875 0.9375  0.875   1.     ]"
+    }
+  },
+  "performance_thresholds": {
+    "regression_r2": 0.85,
+    "regression_rmse_max": 100,
+    "classification_accuracy": 0.8,
+    "cv_std_max": 0.1
+  },
+  "recommendations": []
+}
