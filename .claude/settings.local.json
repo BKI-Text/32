@@ -16,7 +16,8 @@
       "WebFetch(domain:efab.bkiapps.com)",
       "Bash(touch:*)",
       "Bash(pip3 install:*)",
-      "Bash(source:*)"
+      "Bash(source:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": []
   }
