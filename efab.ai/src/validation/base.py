@@ -2,7 +2,7 @@
 
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Union, Type, get_type_hints
-from pydantic import BaseModel, Field, validator, root_validator
+from pydantic import BaseModel, Field, field_validator, root_validator
 from enum import Enum
 from datetime import datetime, date
 from decimal import Decimal

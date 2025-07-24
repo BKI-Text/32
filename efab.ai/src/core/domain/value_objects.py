@@ -1,9 +1,11 @@
 from decimal import Decimal
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 from datetime import datetime
 
 class Money(BaseModel):
+    model_config = ConfigDict(frozen=True)
+    
     amount: Decimal = Field(..., ge=0, description="Monetary amount")
     currency: str = Field(default="USD", description="Currency code")
     
@@ -21,6 +23,8 @@ class Money(BaseModel):
         return f"{self.currency} {self.amount:.2f}"
 
 class Quantity(BaseModel):
+    model_config = ConfigDict(frozen=True)
+    
     amount: Decimal = Field(..., ge=0, description="Quantity amount")
     unit: str = Field(..., description="Unit of measurement")
     
@@ -42,20 +46,46 @@ class MaterialId(BaseModel):
     
     def __str__(self):
         return self.value
+    
+    def __hash__(self):
+        return hash(self.value)
+    
+    def __eq__(self, other):
+        if isinstance(other, MaterialId):
+            return self.value == other.value
+        return False
 
 class SupplierId(BaseModel):
     value: str = Field(..., description="Supplier identifier")
     
     def __str__(self):
         return self.value
+    
+    def __hash__(self):
+        return hash(self.value)
+    
+    def __eq__(self, other):
+        if isinstance(other, SupplierId):
+            return self.value == other.value
+        return False
 
 class SkuId(BaseModel):
     value: str = Field(..., description="SKU identifier")
     
     def __str__(self):
         return self.value
+    
+    def __hash__(self):
+        return hash(self.value)
+    
+    def __eq__(self, other):
+        if isinstance(other, SkuId):
+            return self.value == other.value
+        return False
 
 class LeadTime(BaseModel):
+    model_config = ConfigDict(frozen=True)
+    
     days: int = Field(..., ge=0, description="Lead time in days")
     
     def __str__(self):

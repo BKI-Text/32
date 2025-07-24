@@ -8,7 +8,7 @@ import json
 
 from ..models.request_models import AnalyticsRequest
 from ..models.response_models import AnalyticsResponse, AnalyticsMetric, BaseResponse
-from ...src.auth.dependencies import get_current_user
+from src.auth.dependencies import get_current_user
 
 router = APIRouter()
 

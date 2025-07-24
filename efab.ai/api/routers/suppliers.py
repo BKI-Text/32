@@ -7,7 +7,7 @@ from decimal import Decimal
 
 from ..models.request_models import SupplierCreateRequest, SupplierUpdateRequest, SupplierMaterialRequest
 from ..models.response_models import SupplierResponse, SupplierListResponse, SupplierMaterialResponse, BaseResponse
-from ...src.auth.dependencies import get_current_user
+from src.auth.dependencies import get_current_user
 
 router = APIRouter()
 

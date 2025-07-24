@@ -7,7 +7,7 @@ from decimal import Decimal
 
 from ..models.request_models import MaterialCreateRequest, MaterialUpdateRequest, PaginationRequest
 from ..models.response_models import MaterialResponse, MaterialListResponse, BaseResponse
-from ...src.auth.dependencies import (
+from src.auth.dependencies import (
     get_current_user, 
     require_view_materials, 
     require_edit_materials,
