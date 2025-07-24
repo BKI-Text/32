@@ -40,13 +40,15 @@ class UserCreate(BaseModel):
     role: UserRole = Field(default=UserRole.VIEWER, description="User role")
     is_active: bool = Field(default=True, description="User active status")
     
-    @validator('username')
+    @field_validator('username')
+    @classmethod
     def validate_username(cls, v):
         if not v.isalnum() and '_' not in v:
             raise ValueError('Username must contain only alphanumeric characters and underscores')
         return v
     
-    @validator('password')
+    @field_validator('password')
+    @classmethod
     def validate_password(cls, v):
         if len(v) < 8:
             raise ValueError('Password must be at least 8 characters long')

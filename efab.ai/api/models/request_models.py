@@ -1,6 +1,6 @@
 """Request Models for Beverly Knits AI Supply Chain Planner API"""
 
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, field_validator
 from typing import List, Optional, Dict, Any
 from datetime import datetime, date
 from decimal import Decimal

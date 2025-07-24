@@ -13,7 +13,7 @@ sys.path.insert(0, str(project_root))
 
 from ..models.request_models import ForecastCreateRequest, MLForecastingRequest
 from ..models.response_models import ForecastResponse, MLForecastingResultResponse, MLForecastResponse, BaseResponse
-from ...src.auth.dependencies import get_current_user
+from src.auth.dependencies import get_current_user
 
 # Import forecasting components
 try:

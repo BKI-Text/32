@@ -14,7 +14,7 @@ sys.path.insert(0, str(project_root))
 
 from ..models.request_models import PlanningExecuteRequest
 from ..models.response_models import PlanningResultResponse, ProcurementRecommendationResponse, BaseResponse
-from ...src.auth.dependencies import get_current_user
+from src.auth.dependencies import get_current_user
 
 # Import planning engine
 try:

@@ -1,7 +1,7 @@
 """Business Entity Validation Schemas for Beverly Knits AI Supply Chain Planner"""
 
 from typing import Dict, List, Optional, Union
-from pydantic import validator, Field
+from pydantic import field_validator, Field
 from datetime import datetime, date, timedelta
 from decimal import Decimal
 from enum import Enum
@@ -122,26 +122,30 @@ class MaterialValidationSchema(ValidatedModel):
     specifications: Dict[str, str] = Field(default_factory=dict, description="Material specifications")
     is_critical: bool = Field(default=False, description="Critical material flag")
     
-    @validator('id')
+    @field_validator('id')
+    @classmethod
     def validate_id(cls, v):
         if not ValidationPatterns.SKU.match(v):
             raise ValueError("Material ID must be valid SKU format")
         return v
     
-    @validator('name')
+    @field_validator('name')
+    @classmethod
     def validate_name(cls, v):
         if not v or len(v.strip()) < 2:
             raise ValueError("Material name must be at least 2 characters")
         return v.strip()
     
-    @validator('type')
+    @field_validator('type')
+    @classmethod
     def validate_type(cls, v):
         allowed_types = ['yarn', 'fabric', 'thread', 'accessory', 'trim']
         if v not in allowed_types:
             raise ValueError(f"Material type must be one of: {', '.join(allowed_types)}")
         return v
     
-    @validator('specifications')
+    @field_validator('specifications')
+    @classmethod
     def validate_specifications(cls, v):
         if v:
             for key, value in v.items():
@@ -168,26 +172,30 @@ class SupplierValidationSchema(ValidatedModel):
     risk_level: str = Field(..., description="Risk level")
     is_active: bool = Field(default=True, description="Active status")
     
-    @validator('id')
+    @field_validator('id')
+    @classmethod
     def validate_id(cls, v):
         if not ValidationPatterns.SKU.match(v):
             raise ValueError("Supplier ID must be valid SKU format")
         return v
     
-    @validator('name')
+    @field_validator('name')
+    @classmethod
     def validate_name(cls, v):
         if not v or len(v.strip()) < 2:
             raise ValueError("Supplier name must be at least 2 characters")
         return v.strip()
     
-    @validator('risk_level')
+    @field_validator('risk_level')
+    @classmethod
     def validate_risk_level(cls, v):
         allowed_levels = ['low', 'medium', 'high']
         if v not in allowed_levels:
             raise ValueError(f"Risk level must be one of: {', '.join(allowed_levels)}")
         return v
     
-    @validator('contact_info')
+    @field_validator('contact_info')
+    @classmethod
     def validate_contact_info(cls, v):
         if v and len(v.strip()) < 5:
             raise ValueError("Contact info must be at least 5 characters if provided")
@@ -216,19 +224,22 @@ class SupplierMaterialValidationSchema(ValidatedModel):
     holding_cost_rate: float = Field(default=0.25, ge=0, le=1, description="Holding cost rate")
     contract_qty_limit: Optional[Decimal] = Field(None, ge=0, description="Contract quantity limit")
     
-    @validator('supplier_id', 'material_id')
+    @field_validator('supplier_id', 'material_id')
+    @classmethod
     def validate_ids(cls, v):
         if not ValidationPatterns.SKU.match(v):
             raise ValueError("IDs must be valid SKU format")
         return v
     
-    @validator('currency')
+    @field_validator('currency')
+    @classmethod
     def validate_currency(cls, v):
         if not ValidationPatterns.CURRENCY.match(v):
             raise ValueError("Currency must be valid 3-letter code")
         return v
     
-    @validator('moq_unit')
+    @field_validator('moq_unit')
+    @classmethod
     def validate_moq_unit(cls, v):
         allowed_units = ['units', 'kg', 'lbs', 'meters', 'yards', 'liters']
         if v not in allowed_units:
@@ -263,13 +274,15 @@ class InventoryValidationSchema(ValidatedModel):
     po_expected_date: Optional[date] = Field(None, description="Expected PO date")
     safety_stock: Decimal = Field(default=0, ge=0, description="Safety stock level")
     
-    @validator('material_id')
+    @field_validator('material_id')
+    @classmethod
     def validate_material_id(cls, v):
         if not ValidationPatterns.SKU.match(v):
             raise ValueError("Material ID must be valid SKU format")
         return v
     
-    @validator('unit')
+    @field_validator('unit')
+    @classmethod
     def validate_unit(cls, v):
         allowed_units = ['units', 'kg', 'lbs', 'meters', 'yards', 'liters', 'pieces']
         if v not in allowed_units:
@@ -310,26 +323,30 @@ class BOMValidationSchema(ValidatedModel):
     waste_percentage: Optional[Decimal] = Field(None, ge=0, le=50, description="Waste percentage")
     efficiency_factor: Optional[Decimal] = Field(None, gt=0, le=2, description="Efficiency factor")
     
-    @validator('sku_id', 'material_id')
+    @field_validator('sku_id', 'material_id')
+    @classmethod
     def validate_ids(cls, v):
         if not ValidationPatterns.SKU.match(v):
             raise ValueError("IDs must be valid SKU format")
         return v
     
-    @validator('unit')
+    @field_validator('unit')
+    @classmethod
     def validate_unit(cls, v):
         allowed_units = ['units', 'kg', 'lbs', 'meters', 'yards', 'liters', 'pieces']
         if v not in allowed_units:
             raise ValueError(f"Unit must be one of: {', '.join(allowed_units)}")
         return v
     
-    @validator('waste_percentage')
+    @field_validator('waste_percentage')
+    @classmethod
     def validate_waste_percentage(cls, v):
         if v is not None and v > 25:
             raise ValueError("Waste percentage over 25% seems unusually high")
         return v
     
-    @validator('efficiency_factor')
+    @field_validator('efficiency_factor')
+    @classmethod
     def validate_efficiency_factor(cls, v):
         if v is not None and v < 0.5:
             raise ValueError("Efficiency factor below 0.5 seems unusually low")
@@ -358,27 +375,31 @@ class ForecastValidationSchema(ValidatedModel):
     upper_bound: Optional[Decimal] = Field(None, ge=0, description="Upper confidence bound")
     lower_bound: Optional[Decimal] = Field(None, ge=0, description="Lower confidence bound")
     
-    @validator('sku_id')
+    @field_validator('sku_id')
+    @classmethod
     def validate_sku_id(cls, v):
         if not ValidationPatterns.SKU.match(v):
             raise ValueError("SKU ID must be valid SKU format")
         return v
     
-    @validator('unit')
+    @field_validator('unit')
+    @classmethod
     def validate_unit(cls, v):
         allowed_units = ['units', 'kg', 'lbs', 'meters', 'yards', 'liters', 'pieces']
         if v not in allowed_units:
             raise ValueError(f"Unit must be one of: {', '.join(allowed_units)}")
         return v
     
-    @validator('source')
+    @field_validator('source')
+    @classmethod
     def validate_source(cls, v):
         allowed_sources = ['sales_order', 'prod_plan', 'projection', 'sales_history']
         if v not in allowed_sources:
             raise ValueError(f"Source must be one of: {', '.join(allowed_sources)}")
         return v
     
-    @validator('forecast_date')
+    @field_validator('forecast_date')
+    @classmethod
     def validate_forecast_date(cls, v):
         if v < date.today() - timedelta(days=30):
             raise ValueError("Forecast date cannot be more than 30 days in the past")
@@ -422,33 +443,38 @@ class ProcurementRecommendationValidationSchema(ValidatedModel):
     reason: Optional[str] = Field(None, max_length=1000, description="Recommendation reason")
     status: str = Field(default="pending", description="Recommendation status")
     
-    @validator('material_id', 'supplier_id')
+    @field_validator('material_id', 'supplier_id')
+    @classmethod
     def validate_ids(cls, v):
         if not ValidationPatterns.SKU.match(v):
             raise ValueError("IDs must be valid SKU format")
         return v
     
-    @validator('unit')
+    @field_validator('unit')
+    @classmethod
     def validate_unit(cls, v):
         allowed_units = ['units', 'kg', 'lbs', 'meters', 'yards', 'liters', 'pieces']
         if v not in allowed_units:
             raise ValueError(f"Unit must be one of: {', '.join(allowed_units)}")
         return v
     
-    @validator('urgency_level')
+    @field_validator('urgency_level')
+    @classmethod
     def validate_urgency_level(cls, v):
         allowed_levels = ['low', 'medium', 'high', 'critical']
         if v not in allowed_levels:
             raise ValueError(f"Urgency level must be one of: {', '.join(allowed_levels)}")
         return v
     
-    @validator('currency')
+    @field_validator('currency')
+    @classmethod
     def validate_currency(cls, v):
         if not ValidationPatterns.CURRENCY.match(v):
             raise ValueError("Currency must be valid 3-letter code")
         return v
     
-    @validator('status')
+    @field_validator('status')
+    @classmethod
     def validate_status(cls, v):
         allowed_statuses = ['pending', 'approved', 'rejected', 'ordered']
         if v not in allowed_statuses:
@@ -482,26 +508,30 @@ class UserValidationSchema(ValidatedModel):
     department: Optional[str] = Field(None, max_length=100, description="Department")
     position: Optional[str] = Field(None, max_length=100, description="Position")
     
-    @validator('username')
+    @field_validator('username')
+    @classmethod
     def validate_username(cls, v):
         if not re.match(r'^[a-zA-Z0-9_-]+$', v):
             raise ValueError("Username can only contain letters, numbers, underscores, and hyphens")
         return v
     
-    @validator('email')
+    @field_validator('email')
+    @classmethod
     def validate_email(cls, v):
         if not ValidationPatterns.EMAIL.match(v):
             raise ValueError("Invalid email format")
         return v
     
-    @validator('role')
+    @field_validator('role')
+    @classmethod
     def validate_role(cls, v):
         allowed_roles = ['admin', 'manager', 'user', 'viewer']
         if v not in allowed_roles:
             raise ValueError(f"Role must be one of: {', '.join(allowed_roles)}")
         return v
     
-    @validator('permissions')
+    @field_validator('permissions')
+    @classmethod
     def validate_permissions(cls, v):
         valid_permissions = [
             'view_materials', 'edit_materials', 'delete_materials',
